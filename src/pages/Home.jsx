@@ -1,9 +1,9 @@
 import Navbar from "../Components/Navbar"
 
-const Home = ({menu}) => {
+const Home = ({menu, setMenu}) => {
   return (
     <div className='w-full h-screen'>
-        <Navbar menu={menu} />
+        <Navbar menu={menu} setMenu={setMenu} />
     </div>
   )
 }
