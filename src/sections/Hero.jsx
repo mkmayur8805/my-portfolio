@@ -1,6 +1,7 @@
 const Hero = () => {
   return (
     <section id="Home">
+      
 
     </section>
   )

@@ -1,7 +1,10 @@
 import { useState } from "react"
 import Home from "./pages/Home"
+import Main1 from "./pages/MaintenancePage"
+import MaintenancePage from "./pages/MaintenancePage"
 
 function App() {
+  const [admin, setAdmin] = useState(false)
   const [menu, setMenu] = useState([
     {item:"Home",isopen: true }, 
     {item:"About",isopen: false },
@@ -9,10 +12,12 @@ function App() {
     {item:"Projects",isopen: false }, 
     {item:"Contact",isopen: false }])
   return (
-    <div className="bg-zinc-950">
+    admin ? <div className="bg-zinc-950">
       <Home menu={menu} setMenu={setMenu} />
-    </div>
+    </div> : <MaintenancePage setAdmin={setAdmin} />
+          
     
+  
   )
 }
 
