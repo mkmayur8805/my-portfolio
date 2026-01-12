@@ -1,5 +1,5 @@
 import mypic from '../assets/mk.jpeg'
-import Para from '../components/Para'
+import Para from '../Components/Para'
 const Hero = () => {
   return (
     <section id="Home" className="h-[170vh] flex flex-col justify-end items-center mb-32">
