@@ -1,29 +1,19 @@
+import { IoLogoReact } from "react-icons/io5";
 const Navbar = ({ menu, setMenu }) => {
   return (
-    <div className="w-full flex justify-center items-center text-zinc-400">
-      <nav className="mt-10 border border-zinc-800 rounded-full">
-        <ul className="flex gap-4 font-semibold text-sm">
-          {menu.map((item, index) => (
-            <li
-              key={index}
-              className={`px-4 py-1 m-2 rounded-full
-                ${item.isopen ? "bg-zinc-800 text-zinc-50" : ""}
-                cursor-pointer hover:text-zinc-50`}
-              onClick={() => {
-                const newMenu = menu.map((m, idx) =>
-                  idx === index
-                    ? { ...m, isopen: true }
-                    : { ...m, isopen: false }
-                );
-                setMenu(newMenu);
-              }}
-            >
-              {item.item}
-            </li>
-          ))}
-        </ul>
-      </nav>
-    </div>
+    <nav className="text-zinc-800 flex justify-between px-10 py-3 items-center">
+      <div className="text-4xl flex gap-2 items-center justify-center cursor-pointer">
+        <IoLogoReact className="text-6xl text-(--primery-color)" />
+      </div>
+      <ul className="flex gap-7 items-center">
+        {menu.map((obj, idx) =>
+          <li className="cursor-pointer font-semibold hover:text-(--primery-color)" key={idx}>{obj.item}</li>
+        )}
+      </ul>
+      <button className="px-6 h-fit py-3 rounded-2xl border border-zinc-200 font-semibold bg-white hover:bg-(--primery-color) hover:text-white transition-all duration-300 hover:border-(--primery-color)">
+        Lets' Talk
+      </button>
+    </nav>
   );
 };
 

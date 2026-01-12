@@ -1,9 +1,17 @@
-import Navbar from "../Components/Navbar"
 
-const Home = ({menu, setMenu}) => {
+import Hero from "../sections/Hero"
+import Aboutme from "../sections/Aboutme"
+import Skills from "../sections/Skills"
+import Projects from "../sections/Projects"
+import Contact from "../sections/Contact"
+const Home = () => {
   return (
-    <div className='w-full h-screen'>
-        <Navbar menu={menu} setMenu={setMenu} />
+    <div className='w-full'>
+        <Hero />
+        <Aboutme />
+        <Skills />
+        <Projects />
+        <Contact />
     </div>
   )
 }
