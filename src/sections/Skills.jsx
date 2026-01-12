@@ -1,4 +1,4 @@
-import Bar from '../components/Bar'
+import Bar from '../Components/Bar'
 import Head1 from '../Components/Head1'
 import Para from '../Components/Para'
 import { FaArrowRightLong } from "react-icons/fa6";
