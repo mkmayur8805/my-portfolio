@@ -6,15 +6,15 @@ import Navbar from "../src/Components/Navbar"
 
 function App() {
   const [admin, setAdmin] = useState(true)
-  const [menu, setMenu] = useState([
-    { item: "Home", isopen: true },
-    { item: "About", isopen: false },
-    { item: "Experience", isopen: false },
-    { item: "Projects", isopen: false },
-    { item: "Contact", isopen: false }])
+  const menu = [
+    { item: "Home"},
+    { item: "About"},
+    { item: "Experience"},
+    { item: "Projects"},
+    { item: "Contact"}]
   return (
     admin ? <div className="bg-grid min-h-screen" >
-      <Navbar menu={menu} setMenu={setMenu} />
+      <Navbar menu={menu} />
       <Home />
     </div> : <MaintenancePage setAdmin={setAdmin} />
 
