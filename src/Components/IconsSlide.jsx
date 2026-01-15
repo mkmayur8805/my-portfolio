@@ -18,7 +18,7 @@ import { FaFigma } from "react-icons/fa";
 
 const IconsSlide = () => {
   return (
-    <div className='flex overflow-x-auto gap-8 w-auto scrollbar-hide text-zinc-800 text-9xl py-10 flex-nowrap animate-slide'>
+    <div className='flex overflow-x-auto gap-8 w-auto scrollbar-hide text-zinc-800 text-9xl flex-nowrap animate-slide'>
         <RiNextjsFill className="hover:text-(--primery-color) hover:-translate-y-2 hover:scale-105 transition-all duration-300 " />
         <FaReact className="hover:text-(--primery-color) hover:-translate-y-2 hover:scale-105 transition-all duration-300" />
         <FaAngular className="hover:text-(--primery-color) hover:-translate-y-2 hover:scale-105 transition-all duration-300" />
