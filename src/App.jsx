@@ -9,13 +9,15 @@ function App() {
   const menu = [
     { item: "Home"},
     { item: "About"},
-    { item: "Experience"},
-    { item: "Projects"},
+    { item: "Skills"},
+    { item: "Services"},
+    { item: "Portfolio"},
+    { item: "Testimonials"},
     { item: "Contact"}]
   return (
     admin ? <div className="bg-grid min-h-screen" >
       <Navbar menu={menu} />
-      <Home />
+      <Home menu={menu} />
     </div> : <MaintenancePage setAdmin={setAdmin} />
 
 

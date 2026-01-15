@@ -11,9 +11,12 @@ const Projects = () => {
         <ProjectsSectionCard />
         <ProjectsSectionCard />
       </div>
-      <div className="pt-16 flex justify-center">
+      <div className="pt-16 flex gap-5 justify-center">
         <button className="px-8 py-3 text-(--primery-color) border text-lg font-semibold border-(--primery-color) rounded-full hover:bg-(--primery-color) hover:text-white transition">
           See More Projects
+        </button>
+        <button className="px-8 py-3 border text-lg font-semibold rounded-full transition bg-(--primery-color) text-white border-(--primery-color) hover:bg-white hover:text-(--primery-color)">
+          Hire me
         </button>
       </div>
     </section>
