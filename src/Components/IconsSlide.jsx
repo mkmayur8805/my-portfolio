@@ -19,23 +19,23 @@ import { FaFigma } from "react-icons/fa";
 const IconsSlide = () => {
   return (
     <div className='flex overflow-x-auto gap-8 w-auto scrollbar-hide text-zinc-800 text-9xl py-10 flex-nowrap animate-slide'>
-        <RiNextjsFill />
-        <FaReact />
-        <FaAngular />
-        <RiRemixRunFill />
-        <TiHtml5 />
-        <FaCss3Alt />
-        <RiJavascriptFill />
-        <BiLogoTypescript />
-        <FaPython />
-        <SiMongodb />
-        <FaNodeJs />
-        <SiExpress />
-        <FaGithub />
-        <TbBrandRedux />
-        <TbBrandDjango />
-        <SiVite />
-        <FaFigma />
+        <RiNextjsFill className="hover:text-(--primery-color) hover:-translate-y-2 hover:scale-105 transition-all duration-300 " />
+        <FaReact className="hover:text-(--primery-color) hover:-translate-y-2 hover:scale-105 transition-all duration-300" />
+        <FaAngular className="hover:text-(--primery-color) hover:-translate-y-2 hover:scale-105 transition-all duration-300" />
+        <RiRemixRunFill className="hover:text-(--primery-color) hover:-translate-y-2 hover:scale-105 transition-all duration-300" />
+        <TiHtml5 className="hover:text-(--primery-color) hover:-translate-y-2 hover:scale-105 transition-all duration-300" />
+        <FaCss3Alt className="hover:text-(--primery-color) hover:-translate-y-2 hover:scale-105 transition-all duration-300" />
+        <RiJavascriptFill className="hover:text-(--primery-color) hover:-translate-y-2 hover:scale-105 transition-all duration-300" />
+        <BiLogoTypescript className="hover:text-(--primery-color) hover:-translate-y-2 hover:scale-105 transition-all duration-300" />
+        <FaPython className="hover:text-(--primery-color) hover:-translate-y-2 hover:scale-105 transition-all duration-300" />
+        <SiMongodb className="hover:text-(--primery-color) hover:-translate-y-2 hover:scale-105 transition-all duration-300" />
+        <FaNodeJs className="hover:text-(--primery-color) hover:-translate-y-2 hover:scale-105 transition-all duration-300" />
+        <SiExpress className="hover:text-(--primery-color) hover:-translate-y-2 hover:scale-105 transition-all duration-300" />
+        <FaGithub className="hover:text-(--primery-color) hover:-translate-y-2 hover:scale-105 transition-all duration-300" />
+        <TbBrandRedux className="hover:text-(--primery-color) hover:-translate-y-2 hover:scale-105 transition-all duration-300" />
+        <TbBrandDjango className="hover:text-(--primery-color) hover:-translate-y-2 hover:scale-105 transition-all duration-300" />
+        <SiVite className="hover:text-(--primery-color) hover:-translate-y-2 hover:scale-105 transition-all duration-300" />
+        <FaFigma className="hover:text-(--primery-color) hover:-translate-y-2 hover:scale-105 transition-all duration-300" />
 
     </div>
   )

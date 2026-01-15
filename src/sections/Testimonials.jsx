@@ -3,7 +3,7 @@ import Head1 from '../Components/Head1'
 import TestimonialCard from '../Components/TestimonialCard'
 const Testimonials = () => {
   return (
-    <section className='py-10 bg-grid2 border'>
+    <section className='py-10 bg-grid2'>
       <div className='px-30'>
         <SectionTag tag="Testimonials" />
         <Head1 text="Happy Users Feedback" />

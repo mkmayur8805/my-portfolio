@@ -16,7 +16,7 @@ const Footer = ({ menu }) => {
         </div>
         <div className="flex items-center justify-center">
             <img className="h-5 mt-24 mx-5" src="https://inexa-html-demos.vercel.app/assets/imgs/icon/line.png" alt="" />
-            <div className=" flex flex-col items-center justify-center text-black rounded-full font-semibold bg-white hover:text-(--primery-color) transition-all h-30 w-30 duration-300 hover:-translate-y-2 cursor-pointer">
+            <div className=" flex flex-col items-center justify-center text-black rounded-full font-semibold bg-white hover:text-(--primery-color) hover:scale-105 shadow-white transition-all h-30 w-30 duration-300 hover:-translate-y-2 cursor-pointer">
               <h5>Let's Talk</h5>
             </div>
         </div>

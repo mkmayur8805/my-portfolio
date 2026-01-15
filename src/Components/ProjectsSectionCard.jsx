@@ -3,7 +3,7 @@ import proimg from "../assets/gaytri-solar.png"
 import TechTag from "./TechTag"
 const ProjectsSectionCard = () => {
     return (
-        <div note="This is a featured project card" className="p-8 flex gap-8 bg-white rounded-lg shadow-lg mb-12">
+        <div note="This is a featured project card" className="p-8 flex gap-8 bg-white rounded-lg shadow-xl mb-12 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
             <div className="w-1/2 overflow-hidden rounded-lg shadow-lg relative">
                 <div className="opacity-0 hover:opacity-100 flex justify-center items-center absolute bg-black/40 h-full w-full transition-opacity duration-300">
                     <button onClick={()=> (window.open("https://gayatrisolar.co.in" ,"_blank"))} className="p-4 rounded-full bg-white text-black transition-colors duration-300 cursor-pointer">View <br /> Project</button>
