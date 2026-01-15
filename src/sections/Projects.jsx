@@ -1,9 +1,10 @@
 import Head1 from "../Components/Head1"
 import ProjectsSectionCard from "../Components/ProjectsSectionCard"
+import SectionTag from '../Components/SectionTag'
 const Projects = () => {
   return (
     <section className='p-30 bg-grid2'>
-      <h2 className='text-xl text-(--primery-color)'>Portfolio</h2>
+      <SectionTag tag="Portfolio" />
       <Head1 text="Featured works" />
       <div className="pt-16">
         <ProjectsSectionCard />

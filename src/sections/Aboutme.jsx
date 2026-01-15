@@ -1,5 +1,4 @@
-import React from 'react'
-
+import SectionTag from '../Components/SectionTag'
 const Aboutme = () => {
   return (
     <section className='p-30'>
@@ -10,7 +9,7 @@ const Aboutme = () => {
           </div>
         </div>
         <div className='pl-28'>
-          <h2 className='text-xl text-(--primery-color)'>About Me</h2>
+          <SectionTag tag="About me" />
           <h3 className='text-5xl text-black font-semibold font-dm-sans mt-5 capitalize leading-14'>
             creative frontend developer focused on turning ideas into digital experiences.
           </h3>
