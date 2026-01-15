@@ -1,8 +1,25 @@
-import React from 'react'
-
+import SectionTag from '../Components/SectionTag'
+import Head1 from '../Components/Head1'
+import TestimonialCard from '../Components/TestimonialCard'
 const Testimonials = () => {
   return (
-    <div>Testimonials</div>
+    <section className='py-10 bg-grid2 border'>
+      <div className='px-30'>
+        <SectionTag tag="Testimonials" />
+        <Head1 text="Happy Users Feedback" />
+      </div>
+      <div note="carousel component" className=' relative flex gap-5 py-10 '>
+        <div className='absolute py-10 left-0 top-0 w-full h-full flex justify-between items-center pointer-events-none'>
+          <div className='w-30 h-full bg-linear-to-r from-[#f0f4e9] to-transparent'></div>
+          <div className='w-30 h-full bg-linear-to-l from-[#f0f4e9] to-transparent'></div>
+        </div>
+        <TestimonialCard />
+        <TestimonialCard />
+        <TestimonialCard />
+        <TestimonialCard />
+      </div>
+
+    </section>
   )
 }
 
