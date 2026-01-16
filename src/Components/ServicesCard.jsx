@@ -95,7 +95,7 @@ const ServicesCard = () => {
                     className="text-(--primery-color) text-7xl mt-6"
                 />
 
-                <h2 ref={textRef} className="text-mk whitespace-nowrap text-[7vw] lg:text-[6vw] lg:mt-4 mt-8">
+                <h2 ref={textRef} className="text-mk whitespace-nowrap text-[7vw] lg:text-[6vw] lg:mt-4 ">
                     Responsive UI Development
                 </h2>
             </div>
