@@ -14,8 +14,14 @@ const ServicesCard = () => {
         const ctx = gsap.context(() => {
             gsap.set(iconRef.current, { scale: 0 });
         });
+        gsap.to(textRef.current, {
+            x: -70,
+            duration: 0.3,
+            ease: "power3.out",
+        });
 
         return () => ctx.revert();
+
     }, []);
 
     const handleEnter = () => {
@@ -69,11 +75,11 @@ const ServicesCard = () => {
             gsap.to(cardRef.current, {
                 height: 0,
                 opacity: 0,
-                duration: 0.5,
+                duration: 0.2,
                 ease: "power3.out",
             });
         }
-    }
+    } 
 
     return (
         <div>
@@ -89,15 +95,15 @@ const ServicesCard = () => {
                     className="text-(--primery-color) text-7xl mt-6"
                 />
 
-                <h2 ref={textRef} className="text-mk text-[6vw] mt-4">
+                <h2 ref={textRef} className="text-mk whitespace-nowrap text-[7vw] lg:text-[6vw] lg:mt-4 mt-8">
                     Responsive UI Development
                 </h2>
             </div>
-            <div ref={cardRef} className="h-0 opacity-0 overflow-y-hidden w-full gap-20 flex py-10">
-                <div className="w-1/2 overflow-hidden rounded-xl">
+            <div ref={cardRef} className="h-0 opacity-0 overflow-y-hidden w-full gap-20 flex flex-col lg:flex-row py-10">
+                <div className="lg:w-1/2 overflow-hidden rounded-xl">
                     <img className="hover:scale-105 transition-transform duration-300" src="https://inexa-html-demos.vercel.app/assets/imgs/services/service-3.png" alt="" />
                 </div>
-                <div className="w-1/2 flex flex-col gap-6 justify-center">
+                <div className="lg:w-1/2 flex flex-col gap-6 justify-center">
                     <h3 className="text-4xl font-semibold font-dm-sans">Website Design: Crafting attractive, user-friendly layouts</h3>
                     <Para text="I specialize in creating visually appealing and user-friendly website designs that enhance user experience and engagement." />
                     <button className="px-6 w-fit py-3 rounded-2xl border border-zinc-200 font-semibold bg-white hover:bg-(--primery-color) hover:text-white transition-all duration-300 hover:-translate-y-2 hover:border-(--primery-color) hover:shadow-lg">

@@ -1,44 +1,82 @@
-import { RiNextjsFill } from "react-icons/ri";
-import { FaReact } from "react-icons/fa";
-import { FaAngular } from "react-icons/fa";
-import { RiRemixRunFill } from "react-icons/ri";
+import {
+  RiNextjsFill,
+  RiRemixRunFill,
+  RiJavascriptFill
+} from "react-icons/ri";
+import {
+  FaReact,
+  FaAngular,
+  FaCss3Alt,
+  FaPython,
+  FaNodeJs,
+  FaGithub,
+  FaFigma
+} from "react-icons/fa";
 import { TiHtml5 } from "react-icons/ti";
-import { FaCss3Alt } from "react-icons/fa";
-import { RiJavascriptFill } from "react-icons/ri";
 import { BiLogoTypescript } from "react-icons/bi";
-import { FaPython } from "react-icons/fa";
-import { SiMongodb } from "react-icons/si";
-import { FaNodeJs } from "react-icons/fa6";
-import { SiExpress } from "react-icons/si";
-import { FaGithub } from "react-icons/fa";
-import { TbBrandRedux } from "react-icons/tb";
-import { TbBrandDjango } from "react-icons/tb";
-import { SiVite } from "react-icons/si";
-import { FaFigma } from "react-icons/fa";
+import { SiMongodb, SiExpress, SiVite } from "react-icons/si";
+import { TbBrandRedux, TbBrandDjango } from "react-icons/tb";
+
+import { useRef, useEffect } from "react";
+import gsap from "gsap";
+
+const hoverClass =
+  "hover:text-(--primery-color) hover:-translate-y-2 hover:scale-105 transition-all duration-300";
 
 const IconsSlide = () => {
+  const sliderRef = useRef(null);
+  const tweenRef = useRef(null);
+
+  useEffect(() => {
+    tweenRef.current = gsap.to(sliderRef.current, {
+      xPercent: -50,
+      duration: 15,
+      ease: "linear",
+      repeat: -1,
+    });
+
+    const handleWheel = (e) => {
+      tweenRef.current.timeScale(e.deltaY > 0 ? 1 : -1);
+    };
+
+    window.addEventListener("wheel", handleWheel);
+    return () => window.removeEventListener("wheel", handleWheel);
+  }, []);
+
   return (
-    <div className='flex overflow-x-auto gap-8 w-auto scrollbar-hide text-zinc-800 text-9xl flex-nowrap animate-slide'>
-        <RiNextjsFill className="hover:text-(--primery-color) hover:-translate-y-2 hover:scale-105 transition-all duration-300 " />
-        <FaReact className="hover:text-(--primery-color) hover:-translate-y-2 hover:scale-105 transition-all duration-300" />
-        <FaAngular className="hover:text-(--primery-color) hover:-translate-y-2 hover:scale-105 transition-all duration-300" />
-        <RiRemixRunFill className="hover:text-(--primery-color) hover:-translate-y-2 hover:scale-105 transition-all duration-300" />
-        <TiHtml5 className="hover:text-(--primery-color) hover:-translate-y-2 hover:scale-105 transition-all duration-300" />
-        <FaCss3Alt className="hover:text-(--primery-color) hover:-translate-y-2 hover:scale-105 transition-all duration-300" />
-        <RiJavascriptFill className="hover:text-(--primery-color) hover:-translate-y-2 hover:scale-105 transition-all duration-300" />
-        <BiLogoTypescript className="hover:text-(--primery-color) hover:-translate-y-2 hover:scale-105 transition-all duration-300" />
-        <FaPython className="hover:text-(--primery-color) hover:-translate-y-2 hover:scale-105 transition-all duration-300" />
-        <SiMongodb className="hover:text-(--primery-color) hover:-translate-y-2 hover:scale-105 transition-all duration-300" />
-        <FaNodeJs className="hover:text-(--primery-color) hover:-translate-y-2 hover:scale-105 transition-all duration-300" />
-        <SiExpress className="hover:text-(--primery-color) hover:-translate-y-2 hover:scale-105 transition-all duration-300" />
-        <FaGithub className="hover:text-(--primery-color) hover:-translate-y-2 hover:scale-105 transition-all duration-300" />
-        <TbBrandRedux className="hover:text-(--primery-color) hover:-translate-y-2 hover:scale-105 transition-all duration-300" />
-        <TbBrandDjango className="hover:text-(--primery-color) hover:-translate-y-2 hover:scale-105 transition-all duration-300" />
-        <SiVite className="hover:text-(--primery-color) hover:-translate-y-2 hover:scale-105 transition-all duration-300" />
-        <FaFigma className="hover:text-(--primery-color) hover:-translate-y-2 hover:scale-105 transition-all duration-300" />
+    <div className="overflow-hidden w-full my-10">
+      <div
+        ref={sliderRef}
+        className="flex gap-10 py-3 text-7xl text-zinc-800 w-max"
+      >
+        <RiNextjsFill className={hoverClass} />
+        <FaReact className={hoverClass} />
+        <FaAngular className={hoverClass} />
+        <RiRemixRunFill className={hoverClass} />
+        <TiHtml5 className={hoverClass} />
+        <FaCss3Alt className={hoverClass} />
+        <RiJavascriptFill className={hoverClass} />
+        <BiLogoTypescript className={hoverClass} />
+        <FaPython className={hoverClass} />
+        <SiMongodb className={hoverClass} />
+        <FaNodeJs className={hoverClass} />
+        <SiExpress className={hoverClass} />
+        <FaGithub className={hoverClass} />
+        <TbBrandRedux className={hoverClass} />
+        <TbBrandDjango className={hoverClass} />
+        <SiVite className={hoverClass} />
+        <FaFigma className={hoverClass} />
 
+        {/* duplicate icons for seamless loop */}
+        <RiNextjsFill className={hoverClass} />
+        <FaReact className={hoverClass} />
+        <FaAngular className={hoverClass} />
+        <RiRemixRunFill className={hoverClass} />
+        <TiHtml5 className={hoverClass} />
+        <FaCss3Alt className={hoverClass} />
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default IconsSlide
+export default IconsSlide;

@@ -5,10 +5,10 @@ import ServicesCard from '../Components/ServicesCard'
 
 const Services = () => {
   return (
-    <section className='p-30'>
+    <section >
       <SectionTag tag="My Services" />
         <Head1 text="What I Offer" />
-        <div className='flex flex-col mt-10'>
+        <div className='mt-10'>
           <ServicesCard />
           <ServicesCard />
           <ServicesCard />

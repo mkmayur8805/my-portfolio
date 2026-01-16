@@ -32,3 +32,25 @@
   -webkit-text-stroke: 1px black;
 }
 
+@media (max-width: 767px) {
+  .bg-grid {
+  background-image: repeating-linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.06) 0px,
+    rgba(0, 0, 0, 0.06) 1px,
+    transparent 1px,
+    transparent 90px
+  );
+}
+
+.bg-grid2 {
+  background-color: #f0f4e9;
+  background-image: repeating-linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.06) 0px,
+    rgba(0, 0, 0, 0.06) 1px,
+    transparent 1px,
+    transparent 90px
+  );
+}
+}

@@ -8,7 +8,7 @@ import Footer from "../sections/Footer"
 import Testimonials from "../sections/Testimonials"
 const Home = ({menu}) => {
   return (
-    <div className='w-full'>
+    <div className='w-full overflow-x-hidden lg:px-30 px-8'>
         <Hero />
         <Aboutme />
         <Skills />
