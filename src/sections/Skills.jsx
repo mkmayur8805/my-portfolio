@@ -5,16 +5,16 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import SectionTag from '../Components/SectionTag'
 const Skills = () => {
   const skill = [
-    { tech: 'HTML5', percentage: '94%' },
-    { tech: 'CSS3', percentage: '64%' },
-    { tech: 'TailwindCSS', percentage: '87%' },
-    { tech: 'TypeScript', percentage: '82%' },
-    { tech: 'React.js', percentage: '85%' },
-    { tech: 'GSAP', percentage: '79%' },
-    { tech: 'Responsiveness', percentage: '81%' },
+    { tech: 'HTML5', percentage: 94 },
+    { tech: 'CSS3', percentage: 64 },
+    { tech: 'TailwindCSS', percentage: 87 },
+    { tech: 'TypeScript', percentage: 82 },
+    { tech: 'React.js', percentage: 85 },
+    { tech: 'GSAP', percentage: 79 },
+    { tech: 'Responsiveness', percentage: 81 },
   ]
   return (
-    <section className='mt-20 lg:px-30 px-8'>
+    <section className='mt-20 lg:px-30 px-8 cursor-default'>
       <div className='flex flex-col lg:flex-row'>
         <div className='lg:w-1/2 lg:pr-20'>
           <SectionTag tag="Skills" />

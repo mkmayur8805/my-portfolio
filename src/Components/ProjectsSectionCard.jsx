@@ -3,12 +3,12 @@ import proimg from "../assets/gaytri-solar.png"
 import TechTag from "./TechTag"
 const ProjectsSectionCard = () => {
     return (
-        <div note="This is a featured project card" className="p-4 lg:p-8 flex lg:flex-row flex-col gap-4 lg:gap-8 bg-white rounded-lg shadow-xl mb-12 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
-            <div className="lg:w-1/2 overflow-hidden rounded-lg shadow-lg relative">
+        <div note="This is a featured project card" className="cursor-default p-4 lg:p-8 flex lg:flex-row flex-col gap-4 lg:gap-8 bg-white rounded-lg shadow-xl mb-12 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+            <div className="lg:w-1/2 overflow-hidden rounded-sm shadow-lg relative">
                 <div className="opacity-0 hover:opacity-100 flex justify-center items-center absolute bg-black/40 h-full w-full transition-opacity duration-300">
                     <button onClick={()=> (window.open("https://gayatrisolar.co.in" ,"_blank"))} className="p-4 rounded-full bg-white text-black transition-colors duration-300 cursor-pointer">View <br /> Project</button>
                 </div>
-                <img src={proimg} alt="project image" className="rounded-lg shadow-lg h-full w-full transition-transform duration-300 hover:scale-105" />
+                <img src={proimg} alt="project image" className="rounded-sm shadow-lg h-full w-full transition-transform duration-300 hover:scale-105" />
             </div>
             <div className="lg:w-1/2">
                 <h3 className="text-[7vw] lg:text-4xl font-dm-sans font-semibold leading-tight">Gayatri Solar Energy <br /> Agency Website</h3>

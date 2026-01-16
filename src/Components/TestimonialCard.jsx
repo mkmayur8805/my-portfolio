@@ -3,7 +3,7 @@ import { FaStar } from "react-icons/fa";
 const TestimonialCard = () => {
     const stars = 4;
     return (
-        <div className='flex flex-col items-center lg:w-1/4 h-125 bg-white p-5 rounded shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300'>
+        <div className='z-10 flex flex-col items-center lg:w-1/4 h-125 bg-white p-5 rounded shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300'>
             <div className=' bg-black w-22 h-22 rounded-full overflow-hidden mb-4'>
                 <img className='h-full w-full' src="https://images.unsplash.com/photo-1595152452543-e5fc28ebc2b8?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
             </div>

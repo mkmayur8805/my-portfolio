@@ -3,7 +3,7 @@ import ProjectsSectionCard from "../Components/ProjectsSectionCard"
 import SectionTag from '../Components/SectionTag'
 const Projects = () => {
   return (
-    <section className='bg-grid2 lg:p-30 p-8'>
+    <section className='bg-grid2 lg:p-20 p-8'>
       <SectionTag tag="Portfolio" />
       <Head1 text="Featured works" />
       <div className="pt-16">

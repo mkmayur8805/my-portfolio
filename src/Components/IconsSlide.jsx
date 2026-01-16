@@ -1,7 +1,7 @@
 import {
   RiNextjsFill,
   RiRemixRunFill,
-  RiJavascriptFill
+  RiJavascriptFill,
 } from "react-icons/ri";
 import {
   FaReact,
@@ -10,7 +10,7 @@ import {
   FaPython,
   FaNodeJs,
   FaGithub,
-  FaFigma
+  FaFigma,
 } from "react-icons/fa";
 import { TiHtml5 } from "react-icons/ti";
 import { BiLogoTypescript } from "react-icons/bi";
@@ -26,29 +26,62 @@ const hoverClass =
 const IconsSlide = () => {
   const sliderRef = useRef(null);
   const tweenRef = useRef(null);
+  const speedSetter = useRef(null);
 
   useEffect(() => {
+    // base infinite marquee
     tweenRef.current = gsap.to(sliderRef.current, {
       xPercent: -50,
-      duration: 15,
+      duration: 18,
       ease: "linear",
       repeat: -1,
     });
 
+    // smooth timeScale controller (NO JERKS)
+    speedSetter.current = gsap.quickTo(
+      tweenRef.current,
+      "timeScale",
+      {
+        duration: 0.5,
+        ease: "power3.out",
+      }
+    );
+
+    let lastTouchY = 0;
+
     const handleWheel = (e) => {
-      tweenRef.current.timeScale(e.deltaY > 0 ? 1 : -1);
+      speedSetter.current(e.deltaY > 0 ? 1 : -1);
     };
 
-    window.addEventListener("wheel", handleWheel);
-    return () => window.removeEventListener("wheel", handleWheel);
+    const handleTouchStart = (e) => {
+      lastTouchY = e.touches[0].clientY;
+    };
+
+    const handleTouchMove = (e) => {
+      const currentY = e.touches[0].clientY;
+      speedSetter.current(currentY < lastTouchY ? 1 : -1);
+      lastTouchY = currentY;
+    };
+
+    window.addEventListener("wheel", handleWheel, { passive: true });
+    window.addEventListener("touchstart", handleTouchStart, { passive: true });
+    window.addEventListener("touchmove", handleTouchMove, { passive: true });
+
+    return () => {
+      window.removeEventListener("wheel", handleWheel);
+      window.removeEventListener("touchstart", handleTouchStart);
+      window.removeEventListener("touchmove", handleTouchMove);
+      tweenRef.current.kill();
+    };
   }, []);
 
   return (
-    <div className="overflow-hidden w-full my-10">
+    <div className="overflow-hidden w-full my-10 touch-manipulation">
       <div
         ref={sliderRef}
-        className="flex gap-10 py-3 text-7xl text-zinc-800 w-max"
+        className="flex gap-10 py-3 text-5xl lg:text-7xl text-zinc-800 w-max"
       >
+        {/* icons */}
         <RiNextjsFill className={hoverClass} />
         <FaReact className={hoverClass} />
         <FaAngular className={hoverClass} />
@@ -67,7 +100,7 @@ const IconsSlide = () => {
         <SiVite className={hoverClass} />
         <FaFigma className={hoverClass} />
 
-        {/* duplicate icons for seamless loop */}
+        {/* duplicate for seamless loop */}
         <RiNextjsFill className={hoverClass} />
         <FaReact className={hoverClass} />
         <FaAngular className={hoverClass} />

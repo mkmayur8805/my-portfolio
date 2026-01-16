@@ -6,6 +6,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
 import { SiWhatsapp } from "react-icons/si";
 import { FaYoutube } from "react-icons/fa";
+import {FaGithub} from "react-icons/fa";
 const Footer = ({ menu }) => {
   return (
     <footer className='bg-[#222222]  text-[#656565] pt-30'>
@@ -32,6 +33,7 @@ const Footer = ({ menu }) => {
           <div className='flex gap-4 mt-6'>
             <FaXTwitter className="hover:text-(--primery-color) transform-all duration-300" />
             <FaInstagram className="hover:text-(--primery-color) transform-all duration-300" />
+            <FaGithub className="hover:text-(--primery-color) transform-all duration-300" />
             <SiWhatsapp className="hover:text-(--primery-color) transform-all duration-300" />
             <FaYoutube className="hover:text-(--primery-color) transform-all duration-300" />
           </div>
@@ -60,7 +62,7 @@ const Footer = ({ menu }) => {
       </div>
       <div className='bg-[#212529] text-center p-4'>
         <p>&copy; {new Date().getFullYear()} <span className='text-white font-semibold cursor-pointer hover:text-(--primery-color) transform-all duration-300'>Mayurkumawat.me</span> | All rights reserved.</p>
-        <h2 className='text-(--primery-color) font-semibold cursor-pointer hover:text-white transform-all duration-300 inline-block'>Code by Mayur Kumawat</h2>
+        <h2 className='mt-2 lg:mt-0 text-(--primery-color) font-semibold cursor-pointer hover:text-white transform-all duration-300 inline-block'>Code by Mayur Kumawat</h2>
       </div>
     </footer>
   )

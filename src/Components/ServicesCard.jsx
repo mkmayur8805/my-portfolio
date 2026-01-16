@@ -15,6 +15,11 @@ const ServicesCard = () => {
             const ctx = gsap.context(() => {
                 gsap.set(iconRef.current, { scale: 0 });
             });
+            gsap.to(textRef.current, {
+                x: -70,
+                duration: 0.3,
+                ease: "power3.out",
+            });
             return () => ctx.revert();
 
         }, []);
@@ -68,7 +73,8 @@ const ServicesCard = () => {
             });
             }
         };
-    const handleClick = () => {
+    const handleClick = (e) => {
+        e.stopPropagation();
         setExpanded(!expanded);
         if (expanded) {
             gsap.to(cardRef.current, {
@@ -88,14 +94,16 @@ const ServicesCard = () => {
     }
 
     return (
-        <div>
+        <div className="relative">
+            
             <div
                 ref={divRef}
                 onClick={handleClick}
                 onMouseEnter={handleEnter}
                 onMouseLeave={handleLeave}
-                className="border-b border-gray-400 cursor-pointer flex items-center gap-1 overflow-hidden pt-2 h-[5.8vw] lg:h-16 -my-4 lg:my-0"
+                className="border-b  border-gray-400 cursor-pointer flex items-center gap-1 overflow-hidden pt-2 h-[5.8vw] lg:h-16 -py-4 lg:my-0"
             >
+                
                 <BsArrowUpRight
                     ref={iconRef}
                     className="text-(--primery-color) text-3xl  lg:text-7xl lg:mt-6"
