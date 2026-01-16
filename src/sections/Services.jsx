@@ -5,7 +5,7 @@ import ServicesCard from '../Components/ServicesCard'
 
 const Services = () => {
   return (
-    <section >
+    <section className='lg:px-30 px-8' >
       <SectionTag tag="My Services" />
         <Head1 text="What I Offer" />
         <div className='mt-10'>

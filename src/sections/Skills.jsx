@@ -14,7 +14,7 @@ const Skills = () => {
     { tech: 'Responsiveness', percentage: '81%' },
   ]
   return (
-    <section className='mt-20'>
+    <section className='mt-20 lg:px-30 px-8'>
       <div className='flex flex-col lg:flex-row'>
         <div className='lg:w-1/2 lg:pr-20'>
           <SectionTag tag="Skills" />

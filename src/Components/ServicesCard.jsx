@@ -1,7 +1,7 @@
 import { BsArrowUpRight } from "react-icons/bs";
 import gsap from "gsap";
 import Para from "./Para";
-import { useEffect, useRef ,useState} from "react";
+import { useEffect, useRef, useState } from "react";
 
 const ServicesCard = () => {
     const [expanded, setExpanded] = useState(false)
@@ -10,68 +10,74 @@ const ServicesCard = () => {
     const textRef = useRef(null);
     const cardRef = useRef(null);
 
-    useEffect(() => {
-        const ctx = gsap.context(() => {
-            gsap.set(iconRef.current, { scale: 0 });
-        });
-        gsap.to(textRef.current, {
-            x: -70,
-            duration: 0.3,
-            ease: "power3.out",
-        });
+    if (window.innerWidth > 767) {
+        useEffect(() => {
+            const ctx = gsap.context(() => {
+                gsap.set(iconRef.current, { scale: 0 });
+            });
+            return () => ctx.revert();
 
-        return () => ctx.revert();
+        }, []);
 
-    }, []);
-
+        
+    }
     const handleEnter = () => {
-        gsap.to(iconRef.current, {
-            scale: 1,
-            duration: 0.3,
-            ease: "power3.out",
-        });
+            gsap.to(iconRef.current, {
+                scale: 1,
+                duration: 0.3,
+                ease: "power3.out",
+            });
 
-        gsap.to(divRef.current, {
-            height: 100,
-            duration: 0.3,
-            ease: "power3.out",
-        });
+            gsap.to(divRef.current, {
+                height: 100,
+                duration: 0.3,
+                ease: "power3.out",
+            });
 
-        gsap.to(textRef.current, {
-            x: 0,
-            duration: 0.3,
-            ease: "power3.out",
-        });
-    };
+            gsap.to(textRef.current, {
+                x: 0,
+                duration: 0.3,
+                ease: "power3.out",
+            });
+        };
 
-    const handleLeave = () => {
-        gsap.to(iconRef.current, {
-            scale: 0,
-            duration: 0.3,
-            ease: "power3.out",
-        });
+        const handleLeave = () => {
+            if(window.innerWidth > 767){
+                gsap.to(iconRef.current, {
+                scale: 0,
+                duration: 0.3,
+                ease: "power3.out",
+            });
 
-        gsap.to(divRef.current, {
-            height: "5vw",
-            duration: 0.3,
-            ease: "power3.out",
-        });
+            gsap.to(divRef.current, {
+                height: "5vw",
+                duration: 0.3,
+                ease: "power3.out",
+            });
 
-        gsap.to(textRef.current, {
-            x: -70,
-            duration: 0.3,
-            ease: "power3.out",
-        });
-    };
+            gsap.to(textRef.current, {
+                x: -70,
+                duration: 0.3,
+                ease: "power3.out",
+            });
+            }else{
+                gsap.to(divRef.current, {
+                height: "5.8vw",
+                duration: 0.3,
+                ease: "power3.out",
+            });
+            }
+        };
     const handleClick = () => {
         setExpanded(!expanded);
         if (expanded) {
-        gsap.to(cardRef.current, {
-            height: "auto",
-            opacity: 1,
-            duration: 0.5,
-            ease: "power3.out",
-        });} else {
+            gsap.to(cardRef.current, {
+                height: "auto",
+                opacity: 1,
+                duration: 0.5,
+                ease: "power3.out",
+            });
+        } else {
             gsap.to(cardRef.current, {
                 height: 0,
                 opacity: 0,
@@ -79,7 +85,7 @@ const ServicesCard = () => {
                 ease: "power3.out",
             });
         }
-    } 
+    }
 
     return (
         <div>
@@ -88,18 +94,18 @@ const ServicesCard = () => {
                 onClick={handleClick}
                 onMouseEnter={handleEnter}
                 onMouseLeave={handleLeave}
-                className="border-b border-gray-400 cursor-pointer flex items-center gap-1 overflow-hidden h-16"
+                className="border-b border-gray-400 cursor-pointer flex items-center gap-1 overflow-hidden pt-2 h-[5.8vw] lg:h-16 -my-4 lg:my-0"
             >
                 <BsArrowUpRight
                     ref={iconRef}
-                    className="text-(--primery-color) text-7xl mt-6"
+                    className="text-(--primery-color) text-3xl  lg:text-7xl lg:mt-6"
                 />
 
-                <h2 ref={textRef} className="text-mk whitespace-nowrap text-[7vw] lg:text-[6vw] lg:mt-4 ">
+                <h2 ref={textRef} className="text-mk whitespace-nowrap text-[6vw] lg:mt-4 ">
                     Responsive UI Development
                 </h2>
             </div>
-            <div ref={cardRef} className="h-0 opacity-0 overflow-y-hidden w-full gap-20 flex flex-col lg:flex-row py-10">
+            <div ref={cardRef} className="h-0 opacity-0 overflow-y-hidden w-full lg:gap-20 gap-10 flex flex-col lg:flex-row py-10">
                 <div className="lg:w-1/2 overflow-hidden rounded-xl">
                     <img className="hover:scale-105 transition-transform duration-300" src="https://inexa-html-demos.vercel.app/assets/imgs/services/service-3.png" alt="" />
                 </div>

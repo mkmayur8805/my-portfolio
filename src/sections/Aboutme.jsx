@@ -2,7 +2,7 @@ import SectionTag from '../Components/SectionTag'
 import Para from '../Components/Para'
 const Aboutme = () => {
   return (
-    <section>
+    <section className='lg:px-30 px-8'>
       <div className='flex flex-col-reverse lg:flex-row'>
         <div>
           <div className='lg:h-120 lg:w-120 mt-12 lg:mt-0 overflow-hidden bg-center bg-cover rounded-sm'>
