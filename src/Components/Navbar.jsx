@@ -125,13 +125,13 @@ const Navbar = ({ menu }) => {
   return (
     <nav
       ref={navRef}
-      className="fixed top-0 left-0 w-full z-50 text-zinc-800 flex justify-between px-8 lg:px-30 py-3 items-center bg-white"
+      className="fixed top-0 left-0 w-full z-50 text-zinc-800 flex justify-between px-8 lg:px-30 py-2 items-center bg-white"
     >
       <div
-        ref={logoRef}
-        className="text-4xl flex gap-2 items-center cursor-pointer"
+        
+        className="flex gap-2 items-center cursor-pointer"
       >
-        <IoLogoReact className="text-6xl text-(--primery-color)" />
+        <IoLogoReact ref={logoRef} className="lg:text-6xl text-[12vw] text-(--primery-color)" />
       </div>
 
       <ul className="hidden lg:flex gap-7 items-center">
@@ -153,7 +153,7 @@ const Navbar = ({ menu }) => {
         Lets' Talk
       </button>
       <div className="lg:hidden">
-        <TbMenuDeep className="text-4xl text-(--primery-color) cursor-pointer" />
+        <TbMenuDeep className="text-[9vw] text-(--primery-color) cursor-pointer" />
       </div>
     </nav>
   );
