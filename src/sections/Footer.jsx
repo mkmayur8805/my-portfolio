@@ -11,20 +11,20 @@ const Footer = ({ menu }) => {
   return (
     <footer className='bg-[#222222]  text-[#656565] pt-30'>
       <div className="flex p-8 lg:px-30">
-        <div className="text-[9vw] lg:text-9xl font-semibold text-white leading-none font-dm-sans">
+        <div className="text-[8vw] lg:text-9xl font-semibold text-white leading-none font-dm-sans">
           <h2>Let's have a</h2>
           <h2 className="italic text-(--primery-color)">conversation</h2>
         </div>
         <div className="flex items-center justify-center">
-            <img className="w-[10vw] lg:h-5 lg:mt-24 mx-5" src="https://inexa-html-demos.vercel.app/assets/imgs/icon/line.png" alt="" />
-            <div className=" flex items-center justify-center text-black rounded-full font-semibold bg-white hover:text-(--primery-color) hover:scale-105 shadow-white transition-all p-2 h-15 w-15 text-center lg:h-30 lg:w-30 duration-300 hover:-translate-y-2 cursor-pointer">
-              <h5 className="text-sm lg:text-base">Let's Talk</h5>
+            <img className="w-[8vw] lg:h-5 lg:mt-24 mx-5" src="https://inexa-html-demos.vercel.app/assets/imgs/icon/line.png" alt="" />
+            <div className=" flex items-center justify-center text-black rounded-full font-semibold bg-white hover:text-(--primery-color) hover:scale-105 shadow-white transition-all p-2 h-[13.5vw] w-[13.5vw] text-center lg:h-30 lg:w-30 duration-300 hover:-translate-y-2 cursor-pointer">
+              <h5 className="text-[70%] lg:text-base italic">Let's Talk</h5>
             </div>
         </div>
       </div>
       <div className=' flex lg:flex-row flex-col gap-12 lg:gap-30 p-8 lg:px-30 py-20'>
         <div>
-          <div className="flex items-center justify-start gap-2 text-3xl font-dm-sans cursor-pointer">
+          <div className="flex items-center justify-start gap-2 lg:text-3xl text-[7vw] leading-7 font-dm-sans cursor-pointer">
             <IoLogoReact className="text-6xl text-(--primery-color)" />
             <h2 className="font-medium text-white">Mayur <br /> Kumawat</h2>
           </div>
@@ -60,7 +60,7 @@ const Footer = ({ menu }) => {
           </div>))}
         </div>
       </div>
-      <div className='bg-[#212529] text-center p-4'>
+      <div className='bg-[#212529] text-center p-4 lg:text-base text-[4.2vw]'>
         <p>&copy; {new Date().getFullYear()} <span className='text-white font-semibold cursor-pointer hover:text-(--primery-color) transform-all duration-300'>Mayurkumawat.me</span> | All rights reserved.</p>
         <h2 className='mt-2 lg:mt-0 text-(--primery-color) font-semibold cursor-pointer hover:text-white transform-all duration-300 inline-block'>Code by Mayur Kumawat</h2>
       </div>

@@ -4,6 +4,9 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
+import { useDispatch } from "react-redux";
+import { openMenu } from "../redux/MenuSlice";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -12,10 +15,9 @@ const Navbar = ({ menu }) => {
   const buttonRef = useRef(null);
   const menuRef = useRef([]);
   const logoRef = useRef(null);
-
   const lastScrollY = useRef(0);
   const heroPassed = useRef(false);
-
+  const dispatch = useDispatch();
   useGSAP(() => {
     const tl = gsap.timeline();
 
@@ -121,6 +123,7 @@ const Navbar = ({ menu }) => {
     };
 
   }, []);
+  
 
   return (
     <nav
@@ -152,7 +155,7 @@ const Navbar = ({ menu }) => {
       >
         Lets' Talk
       </button>
-      <div className="lg:hidden">
+      <div onClick={() => { console.log("open menu"); dispatch(openMenu()) }} className="lg:hidden">
         <TbMenuDeep className="text-[9vw] text-(--primery-color) cursor-pointer" />
       </div>
     </nav>
