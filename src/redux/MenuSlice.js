@@ -1,17 +1,18 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { Navigate } from "react-router-dom";
 
 const MenuSlice = createSlice({
     name: "MenuSlice",
     initialState: {
         isOpen: false,
         MenuItems: [
-            { item: "Home" },
-            { item: "About" },
-            { item: "Skills" },
-            { item: "Services" },
-            { item: "Portfolio" },
-            { item: "Testimonials" },
-            { item: "Contact" }]
+            { item: "Home" ,onclick:()=> Navigate('/#hero')},
+            { item: "About",onclick:()=> Navigate('/#about') },
+            { item: "Skills",onclick:()=> Navigate('/#skills') },
+            { item: "Services",onclick:()=> Navigate('/#services') },
+            { item: "Portfolio",onclick:()=> Navigate('/#portfolio') },
+            { item: "Testimonials",onclick:()=> Navigate('/#testimonials') },
+            { item: "Contact",onclick:()=> Navigate('/#contact') }]
     },
     reducers: {
         openMenu: (state) => {

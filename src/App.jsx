@@ -1,22 +1,20 @@
 import { useState } from "react"
 import Home from "./pages/Home"
+import Contactpage from "./pages/Contactpage"
 import Navbar from "../src/Components/Navbar"
 import Menu from "./Components/Menu"
+import { Route, Routes } from "react-router-dom"
 function App() {
-  const menu = [
-    { item: "Home"},
-    { item: "About"},
-    { item: "Skills"},
-    { item: "Services"},
-    { item: "Portfolio"},
-    { item: "Testimonials"},
-    { item: "Contact"}]
+
   return (
     
     <div className="bg-grid min-h-screen cursor-default select-none" >
-      <Navbar menu={menu} />
-      <Menu menu={menu} />
-      <Home menu={menu} />
+      <Navbar />
+      <Menu/>
+      <Routes >
+      <Route path="/" element={<Home/>} />
+      <Route path="/contact" element={<Contactpage />} />
+      </Routes>
     </div>
 
 

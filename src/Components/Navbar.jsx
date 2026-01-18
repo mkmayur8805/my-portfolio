@@ -4,13 +4,15 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { openMenu } from "../redux/MenuSlice";
 
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Navbar = ({ menu }) => {
+const Navbar = () => {
+  let menu = useSelector((state) => state.MenuSlice.MenuItems);
+  console.log(menu);
   const navRef = useRef(null);
   const buttonRef = useRef(null);
   const menuRef = useRef([]);
@@ -142,6 +144,7 @@ const Navbar = ({ menu }) => {
           <li
             ref={el => (menuRef.current[idx] = el)}
             key={idx}
+            onClick={menu.onclick}
             className="cursor-pointer text-lg font-semibold hover:text-(--primery-color) transition-all duration-300 hover:-translate-y-1"
           >
             {e.item}

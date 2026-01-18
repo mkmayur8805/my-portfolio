@@ -7,7 +7,10 @@ import { FaInstagram } from "react-icons/fa";
 import { SiWhatsapp } from "react-icons/si";
 import { FaYoutube } from "react-icons/fa";
 import {FaGithub} from "react-icons/fa";
-const Footer = ({ menu }) => {
+import { useSelector } from "react-redux";
+
+const Footer = () => {
+  let menu = useSelector((state) => state.MenuSlice.MenuItems);
   return (
     <footer className='bg-[#222222]  text-[#656565] pt-30'>
       <div className="flex p-8 lg:px-30">
