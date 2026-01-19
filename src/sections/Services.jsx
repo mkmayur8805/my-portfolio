@@ -42,7 +42,7 @@ const Services = () => {
   }
 ];
   return (
-    <section className='lg:p-30 p-8 bg-grid2' >
+    <section id='services' className='lg:p-30 p-8 bg-grid2' >
       <SectionTag tag="My Services" />
         <Head1 text="What I Offer" />
         <div className='mt-10 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8'>

@@ -5,13 +5,13 @@ const MenuSlice = createSlice({
     initialState: {
         isOpen: false,
         MenuItems: [
-            { item: "Home" ,link:'/'},
-            { item: "About",onclick:()=> scrollToSection('about'),link:'/#about' },
-            { item: "Skills",link:'/#skills' },
-            { item: "Services",link:'/#services' },
-            { item: "Portfolio",link:'/portfolio' },
-            { item: "Testimonials",link:'/#testimonials' },
-            { item: "Contact",link:'/contact' }]
+            { item: "Home", type: "section", target: "home" },
+            { item: "About", type: "section", target: "about" },
+            { item: "Skills", type: "section", target: "skills" },
+            { item: "Services", type: "section", target: "services" },
+            { item: "Portfolio", type: "route", path: "/portfolio" },
+            { item: "Testimonials", type: "section", target: "testimonials" },
+            { item: "Contact", type: "route", path: "/contact" }]
     },
     reducers: {
         openMenu: (state) => {
