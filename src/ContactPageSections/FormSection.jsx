@@ -7,10 +7,10 @@ import { FaLocationDot } from "react-icons/fa6";
 
 const FormSection = () => {
   return (
-    <div className='w-full h-full lg:flex lg:px-30 lg:py-30 p-8'>
-      <div className='w-1/2 lg:p-8'>
+    <div className='w-full h-full flex flex-col lg:flex-row lg:px-30 lg:py-30 px-8 py-12'>
+      <div className='lg:w-1/2 lg:p-8'>
       <SectionTag className="lg:text-lg!" tag="contact" />
-        <h4 className='lg:text-5xl lg:my-6 font-semibold lg:leading-15'>Have Any Questions? Let’s Connect and Create Something Meaningful Together!</h4>
+        <h4 className='lg:text-5xl text-[8.5vw] my-6 font-semibold leading-12 lg:leading-15'>Have Any Questions? Let’s Connect and Create Something Meaningful Together!</h4>
         <Para className="lg:my-6" text="No matter the size or complexity of your idea, I’d love to hear about it. Whether you’re starting from scratch or looking to improve an existing website, feel free to drop a message. Let’s collaborate, explore your vision, and create something meaningful, impactful, and built to perform." />
         <div className='text-xl'>
           <div className='flex gap-2 items-center mt-4'>

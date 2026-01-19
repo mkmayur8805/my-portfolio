@@ -16,24 +16,24 @@ const ContactFooter = () => {
     ]
     return (
 
-            <div className='bg-(--secondory-color) capitalize lg:p-30 lg:pb-0 bg-[url("https://inexa-html-demos.vercel.app/assets/imgs/background/pattern.png")]'>
+            <div className='bg-(--secondory-color) capitalize p-8 lg:p-30 lg:pb-0 bg-[url("https://inexa-html-demos.vercel.app/assets/imgs/background/pattern.png")]'>
                 <p className='underline text-(--primery-color)'>have a nice work! let’s talk with me</p>
-                <h2 className='text-7xl font-semibold font-dm-sans'>mkmayur4480@gmail.com</h2>
+                <h2 className='lg:text-7xl text-[6vw] font-semibold font-dm-sans uppercase'>mkmayur4480@gmail.com</h2>
                 <div className='flex bg-white mt-8 rounded-2xl overflow-hidden'>
                     {icons.map((item, index) => (
                         index == 0 ?
-                            <div onClick={() => window.open(item.Link, "_blank")} className='flex justify-between w-full items-center px-4 py-2 hover:text-white duration-300 font-semibold hover:bg-(--primery-color)'>
-                                <h4 className='text-lg '>{item.name}</h4>
+                            <div key={index} onClick={() => window.open(item.Link, "_blank")} className='flex lg:justify-between justify-center w-full items-center px-4 py-2 hover:text-white duration-300 font-semibold hover:bg-(--primery-color)'>
+                                <h4 className='text-lg '><span className='lg:flex hidden' >{item.name}</span></h4>
                                 {item.icon}
                             </div>
                             :
-                            <div onClick={() => window.open(item.Link, "_blank")} className='flex justify-between w-full items-center px-4 py-2 border-l-2 border-gray-300 hover:text-white duration-300 font-semibold hover:bg-(--primery-color)'>
-                                <h4 className='text-lg '>{item.name}</h4>
+                            <div key={index} onClick={() => window.open(item.Link, "_blank")} className='flex lg:justify-between justify-center w-full items-center px-4 py-2 border-l-2 border-gray-300 hover:text-white duration-300 font-semibold hover:bg-(--primery-color)'>
+                                <h4 className='text-lg '><span className='lg:flex hidden' >{item.name}</span></h4>
                                 {item.icon}
                             </div>
                     ))}
                 </div>
-                <div className='flex justify-between text-center py-5 lg:text-base text-[4.2vw]'>
+                <div className='flex justify-between text-center py-5 lg:flex-row flex-col lg:text-base text-[4.2vw]'>
                     <h2 className='mt-2 lg:mt-0 text-(--primery-color) font-semibold cursor-pointer hover:text-black transform-all duration-300 inline-block'>Code by Mayur Kumawat</h2>
                     <p>&copy; {new Date().getFullYear()} <span className='text-black font-semibold cursor-pointer hover:text-(--primery-color) transform-all duration-300'>Mayurkumawat.me</span> | All rights reserved.</p>
                 </div>

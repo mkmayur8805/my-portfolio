@@ -24,15 +24,15 @@ const Form = () => {
         // Handle form submission logic here
     }
     return (
-        <form onSubmit={handleSubmit} className=' shadow-xl lg:p-10 lg:pt-8 p-4 pt-5 rounded-lg bg-white'>
+        <form onSubmit={handleSubmit} className=' shadow-xl lg:p-10 lg:pt-8 p-4 lg:pt-5 rounded-lg bg-white'>
             
-            <h4 className='lg:text-5xl mb-6 text-[14vw] lg:leading-12 leading-[15vw] capitalize font-semibold mt-5'>have a cool Project?</h4>
+            <h4 className='lg:text-5xl mb-6 text-[12vw] lg:leading-12 leading-[15vw] capitalize font-semibold mt-5'>have a cool Project?</h4>
             <div className='flex flex-col gap-4'>
                 {inputs.map((input, index) => (
                     <FormInput value={form[input.type]} onChange={(e) => setForm({ ...form, [input.type]: e.target.value })} key={index} icon={input.icon} type={input.type} placeholder={input.placeholder} className="" />
                 ))}
             </div>
-            <div className='flex gap-2 lg:py-3 capitalize'>
+            <div className='flex gap-2 py-3 capitalize'>
                 <input className='accent-(--primery-color)' checked={form.agree} onChange={(e) => setForm({ ...form, agree: e.target.checked })} type="checkbox" />
                 <p>i agree to the site's <Link className='underline hover:text-(--primery-color) duration-300' to="/privacy">privacy policy</Link></p>
             </div>

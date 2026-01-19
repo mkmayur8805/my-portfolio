@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { Navigate } from "react-router-dom";
 
 const MenuSlice = createSlice({
     name: "MenuSlice",
@@ -10,7 +9,7 @@ const MenuSlice = createSlice({
             { item: "About",onclick:()=> scrollToSection('about'),link:'/#about' },
             { item: "Skills",link:'/#skills' },
             { item: "Services",link:'/#services' },
-            { item: "Portfolio",link:'/#portfolio' },
+            { item: "Portfolio",link:'/portfolio' },
             { item: "Testimonials",link:'/#testimonials' },
             { item: "Contact",link:'/contact' }]
     },

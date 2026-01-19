@@ -1,8 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
 import MenuSlice from "./MenuSlice";
+import ProjectsSlice from "./ProjectsSlice";
 const store = configureStore({
     reducer: {
-        MenuSlice: MenuSlice
+        MenuSlice: MenuSlice,
+        ProjectsSlice: ProjectsSlice
     },
 })
 

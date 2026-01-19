@@ -13,7 +13,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Navbar = () => {
   let menu = useSelector((state) => state.MenuSlice.MenuItems);
-  console.log(menu);
   const navRef = useRef(null);
   const buttonRef = useRef(null);
   const menuRef = useRef([]);
@@ -162,7 +161,7 @@ const Navbar = () => {
           Lets' Talk
         </button>
       </Link>
-      <div onClick={() => { console.log("open menu"); dispatch(openMenu()) }} className="lg:hidden">
+      <div onClick={() => {dispatch(openMenu()) }} className="lg:hidden">
         <TbMenuDeep className="text-[9vw] text-(--primery-color) cursor-pointer" />
       </div>
     </nav>

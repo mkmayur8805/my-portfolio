@@ -1,16 +1,16 @@
-import React from 'react'
 import Hero from '../ContactPageSections/Hero'
 import FormSection from '../ContactPageSections/FormSection'
 import ContactFooter from '../ContactPageSections/ContactFooter'
+import PortfolioBody from '../ContactPageSections/PortfolioBody'
 
-const Contactpage = () => {
+const Portfolio = () => {
   return (
     <div className='w-full overflow-x-hidden'>
-      <Hero heading="get in touch" bgtext="contact"/>
-      <FormSection />
+      <Hero heading="Portfolio" bgtext="portfolio" />
+      <PortfolioBody />
       <ContactFooter />
     </div>
   )
 }
 
-export default Contactpage
+export default Portfolio
