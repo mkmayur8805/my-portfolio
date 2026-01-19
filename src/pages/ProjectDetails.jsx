@@ -11,7 +11,7 @@ const ProjectDetails = () => {
     if (!project) {
         return <div className="flex flex-col gap-3 items-center justify-center min-h-screen">
             <h5>Project not found</h5>
-            <Link to="/" className="text-blue-500 underline ml-2">
+            <Link to="/" className="text-(--primery-col) underline ml-2">
             <button className="px-4 py-2 bg-black text-white rounded-md hover:bg-gray-800 transition">
                 Go Back Home
             </button>
