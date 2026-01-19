@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import Para from "../Components/Para" 
 import proimg from "../assets/gaytri-solar.png"
 import TechTag from "./TechTag"
@@ -19,7 +20,9 @@ const ProjectsSectionCard = ({project}) => {
                     ))}
                 </div>
                 <div className="flex gap-2 text-nowrap text-sm lg:text-base">
-                    <button className="mt-6 px-4 py-1 bg-black text-white rounded-full hover:bg-gray-800 transition-all duration-300 cursor-pointer hover:-translate-y-1">Project Details</button>
+                    <Link to={`/portfolio/${project.slug}`}>
+                    <button className="mt-6 px-4 py-2 bg-black text-white rounded-full hover:bg-gray-800 transition-all duration-300 cursor-pointer hover:-translate-y-1">Project Details</button>
+                    </Link>
                      <button onClick={()=> (window.open("https://gayatrisolar.co.in" ,"_blank"))} className="mt-6 px-4 py-2 border border-black text-black rounded-full hover:bg-black hover:text-white  transition-colors duration-300 cursor-pointer">Visit Website</button>
                 </div>
 

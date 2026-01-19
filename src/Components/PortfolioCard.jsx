@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 const PortfolioCard = ({ title, description, link, img }) => {
     return (
         <div className="w-full">
-            <Link to={link} target="_blank" rel="noopener noreferrer">
+            <Link to={link} rel="noopener noreferrer">
                 <div className="relative overflow-hidden rounded-lg">
                     <img className="hover:scale-105 duration-300" src={img} alt={title} />
                     <div className="absolute top-0 left-0 w-full h-full bg-black/30 opacity-0 hover:opacity-100  duration-300 flex items-center justify-center">
