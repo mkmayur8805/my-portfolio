@@ -6,6 +6,7 @@ import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { openMenu } from "../redux/MenuSlice";
+import { Link } from "react-router-dom";
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -25,7 +26,7 @@ const Navbar = () => {
 
     tl.fromTo(navRef.current,
       { y: -100, opacity: 0 },
-      { y: 0, opacity: 1,background:"transparent", duration: 1, ease: "power2.out" }
+      { y: 0, opacity: 1, background: "transparent", duration: 1, ease: "power2.out" }
     )
       .fromTo(menuRef.current,
         { y: -50, opacity: 0 },
@@ -125,7 +126,7 @@ const Navbar = () => {
     };
 
   }, []);
-  
+
 
   return (
     <nav
@@ -133,7 +134,7 @@ const Navbar = () => {
       className="fixed top-0 left-0 w-full z-50 text-zinc-800 flex justify-between px-8 lg:px-30 py-2 items-center bg-white"
     >
       <div
-        
+
         className="flex gap-2 items-center cursor-pointer"
       >
         <IoLogoReact ref={logoRef} className="lg:text-6xl text-[12vw] text-(--primery-color)" />
@@ -144,20 +145,23 @@ const Navbar = () => {
           <li
             ref={el => (menuRef.current[idx] = el)}
             key={idx}
-            onClick={menu.onclick}
             className="cursor-pointer text-lg font-semibold hover:text-(--primery-color) transition-all duration-300 hover:-translate-y-1"
           >
-            {e.item}
+            <Link to={e.link}>
+              {e.item}
+            </Link>
           </li>
         ))}
       </ul>
 
-      <button
-        ref={buttonRef}
-        className="hidden lg:flex px-6 py-3 rounded-2xl border border-zinc-200 font-semibold bg-white hover:bg-(--primery-color) hover:text-white transition-all duration-300 shadow-lg"
-      >
-        Lets' Talk
-      </button>
+      <Link to="/contact">
+        <button
+          ref={buttonRef}
+          className="hidden lg:flex px-6 py-3 rounded-2xl border border-zinc-200 font-semibold bg-white hover:bg-(--primery-color) hover:text-white transition-all duration-300 shadow-lg"
+        >
+          Lets' Talk
+        </button>
+      </Link>
       <div onClick={() => { console.log("open menu"); dispatch(openMenu()) }} className="lg:hidden">
         <TbMenuDeep className="text-[9vw] text-(--primery-color) cursor-pointer" />
       </div>

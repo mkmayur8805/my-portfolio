@@ -6,13 +6,13 @@ const MenuSlice = createSlice({
     initialState: {
         isOpen: false,
         MenuItems: [
-            { item: "Home" ,onclick:()=> Navigate('/#hero')},
-            { item: "About",onclick:()=> Navigate('/#about') },
-            { item: "Skills",onclick:()=> Navigate('/#skills') },
-            { item: "Services",onclick:()=> Navigate('/#services') },
-            { item: "Portfolio",onclick:()=> Navigate('/#portfolio') },
-            { item: "Testimonials",onclick:()=> Navigate('/#testimonials') },
-            { item: "Contact",onclick:()=> Navigate('/#contact') }]
+            { item: "Home" ,link:'/'},
+            { item: "About",onclick:()=> scrollToSection('about'),link:'/#about' },
+            { item: "Skills",link:'/#skills' },
+            { item: "Services",link:'/#services' },
+            { item: "Portfolio",link:'/#portfolio' },
+            { item: "Testimonials",link:'/#testimonials' },
+            { item: "Contact",link:'/contact' }]
     },
     reducers: {
         openMenu: (state) => {

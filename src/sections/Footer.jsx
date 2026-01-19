@@ -8,6 +8,7 @@ import { SiWhatsapp } from "react-icons/si";
 import { FaYoutube } from "react-icons/fa";
 import {FaGithub} from "react-icons/fa";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   let menu = useSelector((state) => state.MenuSlice.MenuItems);
@@ -59,7 +60,7 @@ const Footer = () => {
         <div>
           <h4 className='text-white font-semibold text-xl'>Essectial</h4>
           {menu.map((e, index) => (<div key={index} className='flex gap-2 items-center mt-4'>
-            <p className='cursor-pointer hover:text-(--primery-color) transform-all duration-300'>{e.item}</p>
+            <p className='cursor-pointer hover:text-(--primery-color) transform-all duration-300'><Link to={e.link}>{e.item}</Link></p>
           </div>))}
         </div>
       </div>

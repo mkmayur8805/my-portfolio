@@ -13,6 +13,7 @@ import { useGSAP } from '@gsap/react';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { closeMenu } from '../redux/MenuSlice';
+import { Link } from 'react-router-dom';
 
 const Menu = () => {
   let menu = useSelector((state) => state.MenuSlice)
@@ -111,7 +112,7 @@ tl.current.from(
         </div>
         <ul>
           {menu.MenuItems.map((e, idx) => (
-            <li ref={(el) => itemsRef.current[idx] = el} key={idx} className='item border-b px-4 py-3 text-xl border-zinc-400 active:text-(--primery-color)'>{e.item}</li>
+            <li onClick={() => dispatch(closeMenu())} ref={(el) => itemsRef.current[idx] = el} key={idx} className='item border-b px-4 py-3 text-xl border-zinc-400 active:text-(--primery-color)'><Link to={e.link}>{e.item}</Link></li>
           ))}
         </ul>
         <div>

@@ -4,7 +4,7 @@ import img from '../assets/about.png'
 import Head1 from '../Components/Head1'
 const Aboutme = () => {
   return (
-    <section className='lg:px-30 px-8'>
+    <section id='about' className='lg:px-30 px-8'>
       <div className='flex flex-col-reverse lg:flex-row'>
         <div>
           <div className='lg:h-140 w-full lg:w-120 mt-12 lg:mt-0 overflow-hidden bg-bottom bg-cover rounded-sm'>
