@@ -9,25 +9,30 @@ const Bar = ({ tech, percentage }) => {
   const numRef = useRef(null);
 
   useEffect(() => {
+    if (!barRef.current || !numRef.current) return;
+
     const ctx = gsap.context(() => {
       const counter = { val: 0 };
 
-      gsap.timeline({
+      const tl = gsap.timeline({
         scrollTrigger: {
           trigger: barRef.current,
           start: "top 90%",
           once: true,
         },
-      })
-      .to(counter, {
+      });
+
+      tl.to(counter, {
         val: percentage,
         duration: 1.2,
         ease: "power2.out",
         onUpdate: () => {
-          numRef.current.textContent = Math.round(counter.val) + "%";
+          if (numRef.current) {
+            numRef.current.textContent =
+              Math.round(counter.val) + "%";
+          }
         },
-      })
-      .to(
+      }).to(
         barRef.current,
         {
           width: percentage + "%",
@@ -38,7 +43,9 @@ const Bar = ({ tech, percentage }) => {
       );
     });
 
-    return () => ctx.revert();
+    return () => {
+      ctx.revert(); // 🔥 kills timeline + ScrollTrigger safely
+    };
   }, [percentage]);
 
   return (

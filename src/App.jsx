@@ -6,6 +6,7 @@ import Menu from "./Components/Menu"
 import Portfolio from "./pages/Portfolio"
 import { Route, Routes } from "react-router-dom"
 import ProjectDetails from "./pages/ProjectDetails"
+import Cursor from "./Components/Cursor"
 function App() {
 
   return (
@@ -13,6 +14,7 @@ function App() {
     <div className="bg-grid min-h-screen cursor-default select-none" >
       <Navbar />
       <Menu/>
+      <Cursor />
       <Routes >
       <Route path="/" element={<Home/>} />
       <Route path="/contact" element={<Contactpage />} />
