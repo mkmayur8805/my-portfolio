@@ -3,6 +3,7 @@ import Head1 from '../Components/Head1'
 import Para from '../Components/Para'
 import { FaArrowRightLong } from "react-icons/fa6";
 import SectionTag from '../Components/SectionTag'
+import { Link } from 'react-router-dom';
 const Skills = () => {
   const skill = [
     { tech: 'HTML5', percentage: 94 },
@@ -15,9 +16,12 @@ const Skills = () => {
   ]
   return (
     <section id='skills' className='mt-20 lg:px-30 px-8 cursor-default'>
+      <div>
+        <SectionTag tag="Skills" />
+      </div>
       <div className='flex flex-col lg:flex-row'>
         <div className='lg:w-1/2 lg:pr-20'>
-          <SectionTag tag="Skills" />
+          
           <Head1 text="Skills and education." />
           <div>
             {skill.map((obj, idx) => (
@@ -27,9 +31,11 @@ const Skills = () => {
         </div>
         <div className='lg:w-1/2 h-full'>
           <div>
-            <Para className="lg:pt-12" text="Experienced in building modern React-based web applications with a focus on performance and clean architecture. Proficient with Git, Redux, and Figma to deliver responsive, production-ready interfaces." />
+            <Para text="Experienced in building modern React-based web applications with a focus on performance and clean architecture. Proficient with Git, Redux, and Figma to deliver responsive, production-ready interfaces." />
             <div className='flex items-center gap-2 mt-5 cursor-pointer text-xl font-semibold hover:text-(--primery-color) hover:-translate-y-1 transition-transform duration-300 w-fit'>
-              <h5>Let's Talk</h5>
+              <Link to="/contact">
+                <h5>Let's Talk</h5>
+              </Link>
               <FaArrowRightLong className='text-(--primery-color) mt-1' />
             </div>
             <div className='lg:pl-10 lg:border-l border-(--primery-color) mt-10'>

@@ -22,12 +22,12 @@ const ContactFooter = () => {
                 <div className='flex bg-white mt-8 rounded-2xl overflow-hidden'>
                     {icons.map((item, index) => (
                         index == 0 ?
-                            <div key={index} onClick={() => window.open(item.Link, "_blank")} className='flex lg:justify-between justify-center w-full items-center px-4 py-2 hover:text-white duration-300 font-semibold hover:bg-(--primery-color)'>
+                            <div key={index} onClick={() => window.open(item.Link, "_blank")} className='cursor-pointer flex lg:justify-between justify-center w-full items-center px-4 py-2 hover:text-white duration-300 font-semibold hover:bg-(--primery-color)'>
                                 <h4 className='text-lg '><span className='lg:flex hidden' >{item.name}</span></h4>
                                 {item.icon}
                             </div>
                             :
-                            <div key={index} onClick={() => window.open(item.Link, "_blank")} className='flex lg:justify-between justify-center w-full items-center px-4 py-2 border-l-2 border-gray-300 hover:text-white duration-300 font-semibold hover:bg-(--primery-color)'>
+                            <div key={index} onClick={() => window.open(item.Link, "_blank")} className='cursor-pointer flex lg:justify-between justify-center w-full items-center px-4 py-2 border-l-2 border-gray-300 hover:text-white duration-300 font-semibold hover:bg-(--primery-color)'>
                                 <h4 className='text-lg '><span className='lg:flex hidden' >{item.name}</span></h4>
                                 {item.icon}
                             </div>

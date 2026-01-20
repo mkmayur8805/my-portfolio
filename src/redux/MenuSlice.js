@@ -5,7 +5,7 @@ const MenuSlice = createSlice({
     initialState: {
         isOpen: false,
         MenuItems: [
-            { item: "Home", type: "section", target: "home" },
+            { item: "Home", type: "section", target: "hero" },
             { item: "About", type: "section", target: "about" },
             { item: "Skills", type: "section", target: "skills" },
             { item: "Services", type: "section", target: "services" },
