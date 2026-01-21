@@ -86,8 +86,9 @@ const Navbar = () => {
 
         gsap.set(navRef.current, {
           y: 0,
-          backgroundColor: "rgba(255,255,255,0.85)",
-          backdropFilter: "blur(12px)",
+          backgroundColor: "rgba(255,255,255,0.6)",
+          boxShadow: "0 4px 30px rgba(0, 0, 0, 0.05)",
+          backdropFilter: "blur(4px)",
         });
       }
     });

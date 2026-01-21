@@ -24,7 +24,7 @@ const Form = () => {
         // Handle form submission logic here
     }
     return (
-        <form onSubmit={handleSubmit} className=' shadow-xl lg:p-10 lg:pt-8 p-4 lg:pt-5 rounded-lg bg-white'>
+        <form onSubmit={handleSubmit} className=' shadow-xl lg:p-10 p-4 lg:pt-5 rounded-lg bg-white'>
             
             <h4 className='lg:text-5xl mb-6 text-[12vw] lg:leading-12 leading-[15vw] capitalize font-semibold mt-5'>have a cool Project?</h4>
             <div className='flex flex-col gap-4'>
