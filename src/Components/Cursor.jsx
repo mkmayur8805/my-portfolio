@@ -63,7 +63,7 @@ const Cursor = () => {
         hidden lg:block
         h-3 w-3 rounded-full
         bg-(--primery-color)
-        fixed pointer-events-none z-999
+        fixed pointer-events-none z-[999]
       "
     />
   );

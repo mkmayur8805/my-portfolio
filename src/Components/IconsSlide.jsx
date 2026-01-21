@@ -16,6 +16,9 @@ import { TiHtml5 } from "react-icons/ti";
 import { BiLogoTypescript } from "react-icons/bi";
 import { SiMongodb, SiExpress, SiVite } from "react-icons/si";
 import { TbBrandRedux, TbBrandDjango } from "react-icons/tb";
+import { TbBrandOpenai } from "react-icons/tb";
+import { SiClaude } from "react-icons/si";
+import { SiGooglegemini } from "react-icons/si";
 
 import { useRef, useEffect } from "react";
 import gsap from "gsap";
@@ -90,11 +93,14 @@ const IconsSlide = () => {
         <FaCss3Alt className={hoverClass} />
         <RiJavascriptFill className={hoverClass} />
         <BiLogoTypescript className={hoverClass} />
+        <TbBrandOpenai className={hoverClass} />
         <FaPython className={hoverClass} />
         <SiMongodb className={hoverClass} />
         <FaNodeJs className={hoverClass} />
         <SiExpress className={hoverClass} />
         <FaGithub className={hoverClass} />
+        <SiClaude className={hoverClass} />
+        <SiGooglegemini className={hoverClass} />
         <TbBrandRedux className={hoverClass} />
         <TbBrandDjango className={hoverClass} />
         <SiVite className={hoverClass} />
