@@ -47,14 +47,19 @@ const Testimonials = () => {
       <div className="relative py-10">
         <div ref={emblaRef} className="overflow-visible">
           <div className="flex gap-5">
-            {testimonials.map((item, index) => (
-              <div
-                key={index}
-                className="flex-[0_0_100%] lg:flex-[0_0_33.333%]"
-              >
-                <TestimonialCard obj={item} />
-              </div>
-            ))}
+            {testimonials.map((item, index) => {
+              let className = index === 0 && "lg:ml-5" ;
+
+              return (
+                <div
+                  key={index}
+                  className="flex-[0_0_100%] lg:flex-[0_0_33.333%]"
+                >
+                  <TestimonialCard className={className} obj={item} />
+                </div>
+              );
+            })}
+
           </div>
         </div>
 

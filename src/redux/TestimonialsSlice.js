@@ -1,35 +1,41 @@
 import { createSlice } from "@reduxjs/toolkit";
+import adityaimg from "../assets/testimonials/aditya.jpg"
 
 const TestimonialsSlice = createSlice({
     name: "TestimonialsSlice",
     initialState: [
         {
-            name: "Prasad patil",
-            img:"",
+            name: "Prasad Patil",
+            img: "",
             stars: 5,
             title: "CEO",
-            feedback: "Mayur delivered a professional and well-structured website aligned with our business needs. The execution was clear, consistent, and timely. We are satisfied with the overall quality of work."
-        },
+            feedback: "Mayur designed our corporate website from scratch, integrating real-time product updates and custom analytics. The result perfectly matched our brand identity, and the launch was seamless. The interactive dashboard is a game-changer for our team."
+        }
+        ,
         {
             name: "Anjali Sharma",
-            img:"",
-            stars: 4, title: "Project Manager",
-            feedback: "Working with Mayur was a fantastic experience. He understood our requirements perfectly and translated them into a user-friendly website. His attention to detail and commitment to deadlines were impressive."
-        },
+            img: "",
+            stars: 4,
+            title: "Project Manager",
+            feedback: "Mayur created a responsive project management portal for us. His custom forms and automated task notifications helped our team save hours every week. The design is clean and intuitive, exactly what we needed."
+        }
+        ,
         {
             name: "Aditya Suryawanshi",
-            img:"",
+            img: adityaimg,
             stars: 5,
             title: "Entrepreneur",
-            feedback: "Mayur exceeded our expectations in every aspect. The website he developed is visually appealing, easy to navigate, and functions flawlessly. His professionalism and expertise made the entire process smooth and enjoyable."
-        },
+            feedback: "Mayur built my e-commerce site with custom payment gateways and inventory management. The checkout process is smooth, and the mobile version is flawless. His support during launch was outstanding."
+        }
+        ,
         {
             name: "Sneha Kulkarni",
-            img:"",
+            img: "",
             stars: 4,
             title: "Marketing Head",
-            feedback: "We are extremely pleased with the website Mayur created for us. It effectively represents our brand and has received positive feedback from our clients. Mayur's dedication to quality and customer satisfaction is commendable."
+            feedback: "Mayur developed our campaign landing pages with integrated analytics. The pages load fast, look vibrant, and helped increase sign-ups by 30%. He really understood our marketing goals."
         }
+
     ],
     reducers: {}
 })
