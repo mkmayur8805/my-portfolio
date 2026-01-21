@@ -11,7 +11,6 @@ const Hero = ({title}) => {
                 <h5>portfolio</h5>
                 <MdArrowForwardIos />
                 <h5>{title}</h5>
-
             </div>
         </div>
   )

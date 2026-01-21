@@ -69,6 +69,7 @@ const Navbar = () => {
           y: 0,
           backgroundColor: "transparent",
           backdropFilter: "blur(0px)",
+          boxShadow: "0 0px 0px rgba(0, 0, 0, 0.05)",
         });
       },
 
@@ -78,6 +79,7 @@ const Navbar = () => {
           y: 0,
           backgroundColor: "transparent",
           backdropFilter: "blur(0px)",
+          boxShadow: "0 0px 0px rgba(0, 0, 0, 0.05)",
         });
       },
 

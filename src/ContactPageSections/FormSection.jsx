@@ -5,7 +5,7 @@ import { IoCall } from "react-icons/io5";
 import { IoMail } from "react-icons/io5";
 import { FaLocationDot } from "react-icons/fa6";
 
-const FormSection = () => {
+const FormSection = ({ setShowSuccess }) => {
   return (
     <div className='w-full h-full flex flex-col lg:flex-row lg:px-30 lg:py-30 px-8 py-12'>
       <div className='lg:w-1/2 lg:p-8'>
@@ -28,7 +28,7 @@ const FormSection = () => {
         </div>
       </div>
       <div className='lg:w-1/2 lg:p-8 lg:border-l lg:border-gray-300 lg:mt-0 mt-8'>
-        <Form />
+        <Form setShowSuccess={setShowSuccess} />
       </div>
 
     </div>
