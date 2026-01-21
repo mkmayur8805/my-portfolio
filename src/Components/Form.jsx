@@ -34,7 +34,7 @@ const Form = () => {
             </div>
             <div className='flex gap-2 py-3 capitalize'>
                 <input className='accent-(--primery-color)' checked={form.agree} onChange={(e) => setForm({ ...form, agree: e.target.checked })} type="checkbox" />
-                <p>i agree to the site's <Link className='underline hover:text-(--primery-color) duration-300' to="/privacy">privacy policy</Link></p>
+                <p>i agree to the site's <Link className='underline hover:text-(--primery-color) duration-300' to="/privacy-policy">privacy policy</Link></p>
             </div>
             <button className='bg-(--primery-color) capitalize disabled:bg-gray-400 text-white px-6 py-3 rounded-md hover:-translate-y-1 duration-300 ease-in-out' type='submit'>send message</button>
         </form>

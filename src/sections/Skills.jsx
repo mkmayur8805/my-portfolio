@@ -41,7 +41,7 @@ const Skills = () => {
             <div className='lg:pl-10 lg:border-l border-(--primery-color) mt-10'>
               <h5 className='text-(--primery-color)'>2021-2023</h5>
               <h3 className='text-3xl font-semibold'>Bachelor of Computer Aplications</h3>
-              <Para className="py-5" text={`I Completed my Bachelor's degree in Computer Applications From "KAANMS COLLEGE, SATANA" gaining a strong foundation in software development, programming languages, and computer science principles.`} />
+              <Para className="py-5" text={`I Completed my Bachelor's degree in Computer Applications From "SVPM College of Science & Computer Education,Malegoan" gaining a strong foundation in software development and computer science principles.`} />
             </div>
             <div className='lg:pl-10 lg:border-l border-(--primery-color)'>
               <h5 className='text-(--primery-color)'>2022-2026</h5>

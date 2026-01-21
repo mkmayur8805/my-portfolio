@@ -77,6 +77,9 @@ const Footer = () => {
           {menu.map((e, index) => (<div key={index} className='flex gap-2 items-center mt-4'>
             <p onClick={()=> handleClick(e)} className='cursor-pointer hover:text-(--primery-color) transform-all duration-300'><Link to={e.link}>{e.item}</Link></p>
           </div>))}
+          <div className='flex gap-2 items-center mt-4'>
+            <p className='cursor-pointer hover:text-(--primery-color) transform-all duration-300'><Link to="/privacy-policy">Privacy Policy</Link></p>
+          </div>
         </div>
       </div>
       <div className='bg-[#212529] text-center p-4 lg:text-base text-[4.2vw]'>

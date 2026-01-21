@@ -1,5 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import adityaimg from "../assets/testimonials/aditya.jpg"
+import braxtonimg from "../assets/testimonials/braxton.png"
+import diegoimg from "../assets/testimonials/diego.jpg"
 
 const TestimonialsSlice = createSlice({
     name: "TestimonialsSlice",
@@ -13,8 +15,8 @@ const TestimonialsSlice = createSlice({
         }
         ,
         {
-            name: "Anjali Sharma",
-            img: "",
+            name: "Braxton Apana",
+            img: braxtonimg,
             stars: 4,
             title: "Project Manager",
             feedback: "Mayur created a responsive project management portal for us. His custom forms and automated task notifications helped our team save hours every week. The design is clean and intuitive, exactly what we needed."
@@ -29,8 +31,8 @@ const TestimonialsSlice = createSlice({
         }
         ,
         {
-            name: "Sneha Kulkarni",
-            img: "",
+            name: "Diego Hernández",
+            img: diegoimg,
             stars: 4,
             title: "Marketing Head",
             feedback: "Mayur developed our campaign landing pages with integrated analytics. The pages load fast, look vibrant, and helped increase sign-ups by 30%. He really understood our marketing goals."

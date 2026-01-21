@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Contactpage from "./pages/Contactpage";
 import Portfolio from "./pages/Portfolio";
 import ProjectDetails from "./pages/ProjectDetails";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 import Navbar from "./Components/Navbar";
 import Menu from "./Components/Menu";
@@ -44,6 +45,7 @@ function App() {
             <Route path="/contact" element={<Contactpage />} />
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/portfolio/:slug" element={<ProjectDetails />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           </Routes>
         </>
       )}
