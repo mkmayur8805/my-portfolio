@@ -5,7 +5,7 @@ const TestimonialCard = ({obj, className}) => {
     return (
         <div className={`${className} h-full flex flex-col bg-white p-5 rounded shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300`}>
             <div className='flex gap-4'>
-                <div className='bg-black max-w-22 max-h-22 min-w-22 min-h-22 rounded-full overflow-hidden'>
+                <div className='bg-black max-w-22 max-h-22 min-w-22 min-h-22 rounded-full overflow-hidden shadow-lg'>
                     <img className='h-full w-full' src={obj.img} alt={obj.name} />
                 </div>
                 <div className='flex flex-col justify-start gap-1 mt-2'>

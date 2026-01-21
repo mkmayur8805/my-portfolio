@@ -19,12 +19,12 @@ const Projects = () => {
       </div>
       <div className=" whitespace-nowrap gap-2 p-8 pt-16 flex lg:text-base justify-center">
         <Link to="/portfolio">
-          <button className="cursor-pointer px-3 py-2 text-(--primery-color) border font-semibold border-(--primery-color) rounded-full hover:bg-(--primery-color) hover:text-white transition">
+          <button className="cursor-pointer shadow hover:shadow-lg px-3 py-2 text-(--primery-color) border font-semibold border-(--primery-color) rounded-full hover:bg-(--primery-color) hover:text-white transition">
             More Projects
           </button>
         </Link>
         <Link to="/contact">
-          <button className="cursor-pointer px-3 py-2 border font-semibold rounded-full transition bg-(--primery-color) text-white border-(--primery-color) hover:bg-transparent hover:text-(--primery-color)">
+          <button className="cursor-pointer shadow hover:shadow-lg px-3 py-2 border font-semibold rounded-full transition bg-(--primery-color) text-white border-(--primery-color) hover:-translate-y-1">
             Hire me
           </button>
         </Link>

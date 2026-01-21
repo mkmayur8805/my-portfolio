@@ -67,13 +67,13 @@ const Testimonials = () => {
         <div className="flex gap-6 mt-4">
           <button
             onClick={scrollPrev}
-            className="p-3 cursor-pointer rounded-full bg-white text-(--primery-color)"
+            className="p-3 shadow hover:shadow-lg duration-300 cursor-pointer rounded-full bg-white text-(--primery-color)"
           >
             <FaArrowLeft />
           </button>
           <button
             onClick={scrollNext}
-            className="p-3 cursor-pointer rounded-full bg-white text-(--primery-color)"
+            className="p-3 shadow hover:shadow-lg duration-300 cursor-pointer rounded-full bg-white text-(--primery-color)"
           >
             <FaArrowRight />
           </button>
