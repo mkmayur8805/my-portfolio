@@ -26,7 +26,8 @@ const TestimonialCard = ({obj}) => {
                 </div>
             </div>
             <div className='w-full flex flex-col items-center'>
-                <Para className="pl-3 text-base! font-dm-sans mt-3" text={obj.feedback} />
+                
+                <Para className="pl-3 text-base! font-dm-sans mt-3" text={`"${obj.feedback}"`} />
             </div>
         </div>
     )

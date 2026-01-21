@@ -63,7 +63,6 @@ const Navbar = () => {
       start: "top top",
       end: "bottom top",
 
-      // 🔹 HERO मध्ये
       onEnter: () => {
         heroPassed.current = false;
         gsap.set(navRef.current, {
@@ -82,7 +81,6 @@ const Navbar = () => {
         });
       },
 
-      // 🔥 HERO बाहेर गेल्यावर IMMEDIATELY apply
       onLeave: () => {
         heroPassed.current = true;
 
@@ -122,7 +120,6 @@ const Navbar = () => {
     };
   }, []);
 
-  // 🔹 Section / Route click
   const handleClick = (item) => {
     if (item.type === "route") navigate(item.path);
 
@@ -142,7 +139,7 @@ const Navbar = () => {
       ref={navRef}
       className="fixed top-0 left-0 w-full z-50 flex justify-between px-8 lg:px-30 py-2 items-center bg-transparent"
     >
-      {/* LOGO */}
+
       <div className="flex gap-2 items-center cursor-pointer">
         <IoLogoReact
           ref={logoRef}
@@ -150,9 +147,10 @@ const Navbar = () => {
         />
       </div>
 
-      {/* MENU */}
+
       <ul className="hidden lg:flex gap-7 items-center">
         {menu.map((e, idx) => (
+          idx === 6 ? null : (
           <li
             key={idx}
             ref={el => (menuRefEls.current[idx] = el)}
@@ -161,10 +159,10 @@ const Navbar = () => {
           >
             {e.item}
           </li>
-        ))}
+          )))}
       </ul>
 
-      {/* CTA */}
+ 
       <button
         ref={buttonRef}
         onClick={() => handleClick(menu.find(m => m.item === "Contact"))}
@@ -173,7 +171,7 @@ const Navbar = () => {
         Lets' Talk
       </button>
 
-      {/* MOBILE MENU */}
+
       <div className="lg:hidden" onClick={() => dispatch(openMenu())}>
         <TbMenuDeep className="text-[9vw] text-(--primery-color) cursor-pointer" />
       </div>
