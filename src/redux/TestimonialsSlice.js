@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
-import adityaimg from "../assets/testimonials/aditya.jpg"
-import braxtonimg from "../assets/testimonials/braxton.png"
-import diegoimg from "../assets/testimonials/diego.jpg"
+import adityaimg from "../assets/Testimonials/aditya.jpg"
+import braxtonimg from "../assets/Testimonials/braxton.png"
+import diegoimg from "../assets/Testimonials/diego.jpg"
 
 const TestimonialsSlice = createSlice({
     name: "TestimonialsSlice",
