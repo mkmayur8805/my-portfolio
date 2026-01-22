@@ -1,34 +1,50 @@
 <!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
-  <!-- Standard favicon -->
-  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
-  <!-- PNG favicons -->
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <!-- Basic SEO -->
+  <title>Mayur Kumawat – Frontend Web Developer | Portfolio</title>
+  <meta
+    name="description"
+    content="Mayur Kumawat is a frontend web developer building clean, responsive, and SEO-friendly websites using React and Tailwind CSS."
+  />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://mayurkumawat.me/" />
 
-  <!-- Android / Chrome -->
-  <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png" />
-  <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png" />
-
-  <!-- Apple devices -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-
-  <!-- Manifest for PWA / Chrome -->
-  <link rel="manifest" href="/site.webmanifest" />
+  <!-- Viewport -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mayur's Portfolio</title>
 
-  <!-- Google tag (gtag.js) -->
+  <!-- Favicons -->
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <!-- Open Graph (Google / Facebook / LinkedIn) -->
+  <meta property="og:title" content="Mayur Kumawat – Frontend Web Developer" />
+  <meta
+    property="og:description"
+    content="Frontend developer specializing in React, Tailwind CSS, and modern web experiences."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mayurkumawat.me/" />
+  <meta property="og:image" content="https://mayurkumawat.me/og-image.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Mayur Kumawat – Frontend Developer" />
+  <meta
+    name="twitter:description"
+    content="Building fast, responsive, and modern frontend websites."
+  />
+  <meta name="twitter:image" content="https://mayurkumawat.me/og-image.png" />
+
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4ZLLGCWFW9"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
+    function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-4ZLLGCWFW9');
   </script>
 </head>
@@ -37,5 +53,4 @@
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
 </body>
-
 </html>
