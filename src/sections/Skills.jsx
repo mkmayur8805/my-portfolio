@@ -4,7 +4,6 @@ import Para from '../Components/Para'
 import { FaArrowRightLong } from "react-icons/fa6";
 import SectionTag from '../Components/SectionTag'
 import { Link } from 'react-router-dom';
-import SEO from '../Components/SEO'
 const Skills = () => {
   const skill = [
     { tech: 'HTML5', percentage: 94 },
@@ -17,10 +16,6 @@ const Skills = () => {
   ]
   return (
     <section id='skills' className='mt-20 lg:px-30 px-8 cursor-default'>
-      <SEO
-        description="Explore my skills in HTML5, CSS3, JavaScript, React.js, and more. Discover my expertise in building modern web applications with a focus on performance and clean architecture."
-        keywords="Skills, HTML5, CSS3, JavaScript, React.js, Web Development, Frontend Development, Web Design"
-      />
       <div>
         <SectionTag tag="Skills" />
       </div>

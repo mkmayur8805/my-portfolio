@@ -4,11 +4,9 @@ import img from '../assets/about.png'
 import Head1 from '../Components/Head1'
 import { Link } from 'react-router-dom'
 
-import SEO from '../Components/SEO'
 const Aboutme = () => {
   return (
     <section id='about' className='lg:px-30 px-8'>
-      <SEO keywords="frontend developer, creative, digital experiences, user interfaces" description="Learn more about me, a creative frontend developer focused on turning ideas into digital experiences. Discover my approach to building clean, scalable, and responsive user interfaces." />
       <div className='flex flex-col-reverse lg:flex-row'>
         <div>
           <div className='lg:h-140 w-full lg:w-120 mt-12 lg:mt-0 overflow-hidden bg-bottom bg-cover rounded-sm'>

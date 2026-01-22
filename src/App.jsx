@@ -14,7 +14,6 @@ import Cursor from "./Components/Cursor";
 import ScrollToTop from "./Components/ScrollToTop";
 import ScrollToTop2 from "./Components/ScrollToTop2";
 import PageLoader from "./Components/PageLoader";
-import SEO from './Components/SEO'
 
 function App() {
   const location = useLocation();
@@ -29,7 +28,6 @@ function App() {
     <div className="bg-grid min-h-screen cursor-default select-none">
       {loading && (
         <>
-          <SEO keywords="portfolio, personal website, projects, skills, services" description="Welcome to my personal portfolio website where I showcase my projects, skills, and services." />
           <PageLoader onComplete={() => setLoading(false)} />
           <Cursor />
         </>
