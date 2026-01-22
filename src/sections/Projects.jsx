@@ -3,10 +3,15 @@ import Head1 from "../Components/Head1"
 import ProjectsSectionCard from "../Components/ProjectsSectionCard"
 import SectionTag from '../Components/SectionTag'
 import { Link } from "react-router-dom"
+import SEO from '../Components/SEO'
 const Projects = () => {
   const showProjects = useSelector((state) => state.ProjectsSlice)
   return (
     <section id="portfolio" className='bg-grid2 lg:p-20 p-8'>
+      <SEO
+        keywords="web development, design, portfolio, projects, featured works, web designer, developer showcase"
+        description="Explore a selection of my featured works showcasing my skills and expertise in web development and design."
+      />
       <SectionTag tag="Portfolio" />
       <Head1 text="Featured works" />
       <div className="pt-16">

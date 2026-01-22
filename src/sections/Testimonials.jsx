@@ -6,6 +6,7 @@ import Autoplay from "embla-carousel-autoplay";
 import SectionTag from '../Components/SectionTag'
 import Head1 from '../Components/Head1'
 import TestimonialCard from '../Components/TestimonialCard'
+import SEO from '../Components/SEO'
 
 import { FaArrowLeft } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
@@ -38,6 +39,10 @@ const Testimonials = () => {
 
   return (
     <section id='testimonials' className='py-10 bg-grid2 p-8'>
+      <SEO
+        keywords="testimonials, user feedback, reviews, customer experiences, product feedback"
+        description="Read feedback from our happy users and see how our product has made a difference in their lives."
+      />
       <div>
         <SectionTag tag="Testimonials" />
         <Head1 className="lg:w-100" text={`Happy Users Feedback`} />
