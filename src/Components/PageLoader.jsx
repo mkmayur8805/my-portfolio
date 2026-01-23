@@ -75,7 +75,7 @@ const PageLoader = ({ onComplete }) => {
         ref={nameRef}
         className="text-(--primery-color) text-4xl lg:text-6xl font-bold tracking-[0.35em]"
       >
-        MAYUR
+        MK MAYUR
       </h1>
 
       {/* Role */}
