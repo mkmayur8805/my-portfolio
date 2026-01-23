@@ -1,4 +1,9 @@
 @import "tailwindcss";
+@import "@fontsource/manrope";
+@import "@fontsource/montserrat";
+@import "@fontsource/dm-sans";
+@import "@fontsource/source-sans-3";
+@import "@fontsource/dm-mono";
 
 :root {
     --primery-color: #fe6700;
@@ -6,6 +11,7 @@
     --border-color:#e4e4e7;
 }
 .bg-grid {
+  background-color: #ffffff;
   background-image: repeating-linear-gradient(
     to right,
     rgba(0, 0, 0, 0.06) 0px,
@@ -23,10 +29,6 @@
     transparent 1px,
     transparent 140px
   );
-}
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Teko:wght@300..700&display=swap');
-.font-dm-sans {
-    font-family: 'DM Sans', sans-serif;
 }
 .text-mk {
   color: transparent;
@@ -56,5 +58,35 @@
 }
 }
 .z-999 {
-  z-index: -99;
+  z-index: 999;
 }
+
+/* Font families */
+.manrope {
+  font-family: "Manrope", sans-serif;
+}
+
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+}
+
+.dm-sans {
+  font-family: "DM Sans", sans-serif;
+}
+
+.source-sans {
+  font-family: "Source Sans 3", sans-serif;
+}
+
+.dm-mono {
+  font-family: "DM Mono", monospace;
+}
+
+.fw-200 { font-weight: 200; }
+.fw-300 { font-weight: 300; }
+.fw-400 { font-weight: 400; }
+.fw-500 { font-weight: 500; }
+.fw-600 { font-weight: 600; }
+.fw-700 { font-weight: 700; }
+.fw-800 { font-weight: 800; }
+.fw-900 { font-weight: 900; }

@@ -1,5 +1,5 @@
 import { useGSAP } from '@gsap/react'
-import mypic from '../assets/mk.jpeg'
+import mypic from '../assets/hero/mayur1.jpg'
 import Para from '../Components/Para'
 import { gsap } from 'gsap'
 import { useRef } from 'react'
@@ -22,7 +22,7 @@ const Hero = () => {
       <h3 ref={kumawatRef} className="font-dm-sans text-[22vw] lg:text-[15rem] font-normal text-(--primery-color) lg:-mb-12 italic">Kumawat</h3>
       <Para className="lg:w-3/4  lg:text-2xl text-center" text="I’m a frontend developer focused on building clean and responsive websites. I enjoy learning, experimenting, and turning ideas into real web experiences." />
       <div className='hidden lg:flex h-72 w-72 overflow-hidden bg-center bg-cover rounded-full mt-18'>
-        <img className='h-full w-full hover:scale-105 transition-transform duration-300' src={mypic} alt="Mayur Kumawat" />
+        <img className='h-full w-full  hover:scale-105 transition-transform duration-300' src={mypic} alt="Mayur Kumawat" />
       </div>
     </section>
   )

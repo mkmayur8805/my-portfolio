@@ -5,6 +5,13 @@ import App from './App.jsx'
 import { Provider } from 'react-redux'
 import store from './redux/Store.js'
 import { BrowserRouter } from 'react-router-dom'
+
+import "@fontsource/manrope";        // all weights
+import "@fontsource/montserrat";
+import "@fontsource/dm-sans";
+import "@fontsource/source-sans-3";
+import "@fontsource/dm-mono";
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>

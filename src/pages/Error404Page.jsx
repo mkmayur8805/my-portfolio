@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Error404Page = () => {
   return (
     <div className="relative">
-      <div className=" absolute top-0 right-0 z-[999] w-full min-h-screen flex flex-col items-center justify-center bg-(--secondory-color) text-center px-6">
+      <div className=" absolute top-0 right-0 z-[999] w-full min-h-screen flex flex-col items-center justify-center bg-grid text-center px-6">
       
       {/* Big 404 Text */}
       <h1 className="text-[12vw] lg:text-[10rem] font-bold text-(--primery-color) mb-4 animate-pulse">
