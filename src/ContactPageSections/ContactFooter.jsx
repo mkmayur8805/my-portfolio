@@ -1,9 +1,3 @@
-import React from 'react'
-import { FaXTwitter } from "react-icons/fa6";
-import { FaInstagram } from "react-icons/fa";
-import { SiWhatsapp } from "react-icons/si";
-import { FaYoutube } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
 import socialData from '../data/socialdata';
 
 
