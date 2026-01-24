@@ -119,7 +119,7 @@ const Form = ({ setShowSuccess }) => {
                         onChange={(e) =>
                             setForm({ ...form, agree: e.target.checked })
                         }
-                        className='accent-(--primery-color)'
+                        className='accent-(--primery-color) cursor-pointer'
                     />
                     <p>
                         i agree to the site's{" "}
@@ -132,11 +132,10 @@ const Form = ({ setShowSuccess }) => {
 
                 <button
                     disabled={loading}
-                    className='bg-(--primery-color) disabled:bg-gray-400 text-white px-6 py-3 rounded-md'
+                    className='bg-(--primery-color) capitalize cursor-pointer disabled:bg-gray-400 text-white px-6 py-3 rounded-md hover:bg-black duration-300 font-semibold mt-4 hover:shadow-xl'
                 >
                     {loading ? "Sending..." : "send message"}
                 </button>
-
             </form>
         </>
     )

@@ -1,13 +1,11 @@
 import React, { useEffect, useRef } from 'react'
 import { gsap } from 'gsap';
 import { IoLogoReact, IoClose, IoCall, IoMail } from "react-icons/io5";
-import { FaXTwitter } from "react-icons/fa6";
-import { FaInstagram, FaGithub, FaYoutube } from "react-icons/fa";
-import { SiWhatsapp } from "react-icons/si";
 import { useGSAP } from '@gsap/react';
 import { useSelector, useDispatch } from 'react-redux';
 import { closeMenu } from '../redux/MenuSlice';
 import { useNavigate, useLocation } from 'react-router-dom';
+import SocialData from '../Data/SocialData';
 
 const Menu = () => {
   const menuState = useSelector(state => state.MenuSlice);
@@ -39,10 +37,10 @@ const Menu = () => {
   }, []);
 
   useEffect(() => {
-    if(menuState.isOpen){
+    if (menuState.isOpen) {
       tl.current.play();
       document.body.style.overflow = "hidden";
-    } else{
+    } else {
       tl.current.reverse();
       document.body.style.overflow = "auto";
     }
@@ -50,23 +48,23 @@ const Menu = () => {
 
   const handleClick = (item) => {
     dispatch(closeMenu());
-    if(item.type === "route") navigate(item.path);
-    if(item.type === "section") {
-      if(location.pathname !== "/") navigate(`/?scrollTo=${item.target}`);
+    if (item.type === "route") navigate(item.path);
+    if (item.type === "section") {
+      if (location.pathname !== "/") navigate(`/?scrollTo=${item.target}`);
       else document.getElementById(item.target)?.scrollIntoView({ behavior: "smooth" });
     }
   }
 
   return (
-    <div style={{pointerEvents: menuState.isOpen ? "auto" : "none"}} ref={bgRef} className='fixed flex justify-end top-0 z-50 left-0 h-screen w-screen bg-black/50'>
-      <div ref={menuRef} className='fixed -right-[100%] duration-100 overflow-y-auto h-screen w-[85vw] bg-white'>
+    <div style={{ pointerEvents: menuState.isOpen ? "auto" : "none" }} ref={bgRef} className='fixed flex justify-end top-0 z-50 left-0 h-screen w-screen bg-black/50'>
+      <div ref={menuRef} className='fixed -right-full duration-100 overflow-y-auto h-screen w-[85vw] bg-white'>
         <div className='flex px-4 py-8 justify-between'>
           <div ref={logoRef} className='flex items-center justify-center gap-2'>
             <IoLogoReact className='text-6xl text-(--primery-color)' />
-            <h5 className='leading-7 text-2xl font-semibold'>Mayur <br/> Kumawat</h5>
+            <h5 className='leading-7 text-2xl font-semibold'>Mayur <br /> Kumawat</h5>
           </div>
           <div onClick={() => dispatch(closeMenu())} ref={closeRef} className='h-fit'>
-            <IoClose className='text-3xl cursor-pointer'/>
+            <IoClose className='text-3xl cursor-pointer' />
           </div>
         </div>
         <ul>
@@ -79,17 +77,19 @@ const Menu = () => {
         <div>
           <h4 ref={h4Ref} className='text-black font-semibold text-xl px-4 mt-6'>Get in touch</h4>
           <div ref={mailRef} className='flex gap-2 items-center px-4 mt-4'>
-            <IoMail className='text-(--primery-color) text-2xl'/>
+            <IoMail className='text-(--primery-color) text-2xl' />
             <p className='cursor-pointer hover:text-(--primery-color) uppercase duration-300'>mkmayur4480@gmail.com</p>
           </div>
           <div ref={callRef} className='flex gap-2 items-center px-4 mt-4'>
-            <IoCall className='text-(--primery-color) text-2xl'/>
+            <IoCall className='text-(--primery-color) text-2xl' />
             <p className='cursor-pointer hover:text-(--primery-color) duration-300'>+91 7448046577</p>
           </div>
         </div>
-        <div className='flex gap-4 p-4 text-2xl mt-6'>
-          {[ FaXTwitter, FaInstagram, FaGithub, SiWhatsapp, FaYoutube].map((Icon, i) => (
-            <span key={i} ref={el => iconsRef.current[i]=el}><Icon className="hover:text-(--primery-color) duration-300"/></span>
+        <div className='flex gap-4 p-4 text-[4.5vw] mt-6'>
+          {SocialData.map((item, i) => (
+            <span onClick={() => window.open(item.url, "_blank")} key={i} ref={el => iconsRef.current[i] = el}>
+              <item.icon className="active:text-(--primery-color)" />
+            </span>
           ))}
         </div>
       </div>

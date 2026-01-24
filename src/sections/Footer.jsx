@@ -2,14 +2,10 @@ import { IoCall } from "react-icons/io5";
 import { IoMail } from "react-icons/io5";
 import { FaLocationDot } from "react-icons/fa6";
 import { IoLogoReact } from "react-icons/io5";
-import { FaXTwitter } from "react-icons/fa6";
-import { FaInstagram } from "react-icons/fa";
-import { SiWhatsapp } from "react-icons/si";
-import { FaYoutube } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
 import { useSelector } from "react-redux";
-import { href, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useNavigate, useLocation } from "react-router-dom";
+import socialData from "../data/socialdata";
 
 const Footer = () => {
   let menu = useSelector((state) => state.MenuSlice.MenuItems);
@@ -50,11 +46,11 @@ const Footer = () => {
           <p className='w-80 mt-4'>Building clean, modern web interfaces with a strong focus on performance, responsiveness, and usability. Passionate about creating reliable digital experiences that balance design precision with scalable, production-ready development.
           </p>
           <div className='flex gap-4 mt-6'>
-            <FaXTwitter onClick={()=> window.open("https://twitter.com", "_blank")} className="hover:text-(--primery-color) transform-all duration-300" />
-            <FaInstagram onClick={()=> window.open("https://instagram.com", "_blank")} className="hover:text-(--primery-color) transform-all duration-300" />
-            <FaGithub onClick={()=> window.open("https://github.com", "_blank")} className="hover:text-(--primery-color) transform-all duration-300" />
-            <SiWhatsapp onClick={()=> window.open(`https://wa.me/917448046577?text=${encodeURIComponent("Hello Mayur, I am contacting you from your portfolio.")}`, "_blank")} className="hover:text-(--primery-color) transform-all duration-300" />
-            <FaYoutube onClick={()=> window.open("https://youtube.com", "_blank")} className="hover:text-(--primery-color) transform-all duration-300" />
+            {socialData.map((social, index) => (
+              <div id={social.name} key={index}>
+                <social.icon onClick={() => window.open(social.url, "_blank")}  className="hover:text-(--primery-color) transform-all duration-300" />
+              </div>
+            ))}
           </div>
         </div>
         <div>
