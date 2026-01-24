@@ -130,12 +130,15 @@ const Form = ({ setShowSuccess }) => {
                 </div>
                 {errors.agree && <p className='text-red-500 text-sm'>{errors.agree}</p>}
 
-                <button
+                <div className='flex gap-2'>
+                    <button
                     disabled={loading}
-                    className='bg-(--primery-color) capitalize cursor-pointer disabled:bg-gray-400 text-white px-6 py-3 rounded-md hover:bg-black duration-300 font-semibold mt-4 hover:shadow-xl'
+                    className='bg-(--primery-color) capitalize cursor-pointer w-full disabled:bg-gray-400 text-white px-6 py-3 rounded-md hover:bg-black duration-300 font-semibold mt-4 hover:shadow-xl'
                 >
                     {loading ? "Sending..." : "send message"}
                 </button>
+                <div onClick={()=>window.open("tel:+917448046577")} className='border-black border capitalize cursor-pointer w-full text-center disabled:bg-gray-400 hover:text-white px-6 py-3 rounded-md hover:bg-black duration-300 font-semibold mt-4 hover:shadow-xl'>call now</div>
+                </div>
             </form>
         </>
     )
