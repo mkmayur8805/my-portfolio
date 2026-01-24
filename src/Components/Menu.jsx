@@ -5,7 +5,7 @@ import { useGSAP } from '@gsap/react';
 import { useSelector, useDispatch } from 'react-redux';
 import { closeMenu } from '../redux/MenuSlice';
 import { useNavigate, useLocation } from 'react-router-dom';
-import SocialData from '../Data/SocialData';
+import SocialData from '../data/socialdata';
 
 const Menu = () => {
   const menuState = useSelector(state => state.MenuSlice);
