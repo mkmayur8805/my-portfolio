@@ -24,9 +24,9 @@ const Footer = () => {
   return (
     <footer className='bg-[#222222]  text-[#656565] pt-30'>
       <div className="flex p-8 lg:px-30">
-        <div className="text-[8vw] lg:text-9xl font-semibold text-white leading-none font-dm-sans">
+        <div className="text-[8vw] lg:text-9xl fw-500 text-white leading-none font-dm-sans">
           <h2>Let's have a</h2>
-          <h2 className="italic text-(--primery-color)">conversation</h2>
+          <h2 className="italic font-sans text-(--primery-color)">conversation</h2>
         </div>
         <div className="flex items-center justify-center">
           <img className="w-[8vw] lg:h-5 lg:mt-24 mx-5" src="https://inexa-html-demos.vercel.app/assets/imgs/icon/line.png" alt="" />
@@ -41,7 +41,7 @@ const Footer = () => {
         <div>
           <div className="flex items-center justify-start gap-2 lg:text-3xl text-[7vw] leading-7 font-dm-sans cursor-pointer">
             <IoLogoReact className="text-6xl text-(--primery-color)" />
-            <h2 className="font-medium text-white">Mayur <br /> Kumawat</h2>
+            <h2 className="fw-500 text-white">Mayur <br /> Kumawat</h2>
           </div>
           <p className='w-80 mt-4'>Building clean, modern web interfaces with a strong focus on performance, responsiveness, and usability. Passionate about creating reliable digital experiences that balance design precision with scalable, production-ready development.
           </p>
@@ -79,8 +79,8 @@ const Footer = () => {
         </div>
       </div>
       <div className='bg-[#212529] text-center p-4 lg:text-base text-[4.2vw]'>
-        <p>&copy; {new Date().getFullYear()} <span className='text-white font-semibold cursor-pointer hover:text-(--primery-color) transform-all duration-300'>Mayurkumawat.me</span> | All rights reserved.</p>
-        <h2 className='mt-2 lg:mt-0 text-(--primery-color) font-semibold cursor-pointer hover:text-white transform-all duration-300 inline-block'>Code by Mayur Kumawat</h2>
+        <p>&copy; {new Date().getFullYear()} <span className='text-white cursor-pointer hover:text-(--primery-color) transform-all duration-300'>Mayurkumawat.me</span> | All rights reserved.</p>
+        <h2 className='mt-2 lg:mt-0 text-(--primery-color)  cursor-pointer hover:text-white transform-all duration-300 inline-block'>Code by Mayur Kumawat</h2>
       </div>
     </footer>
   )

@@ -25,7 +25,7 @@ function App() {
   }, [location.pathname]);
 
   return (
-    <div className="bg-grid min-h-screen cursor-default select-none">
+    <div className="bg-grid min-h-screen dm-sans cursor-default select-none">
       {loading && (
         <>
           <PageLoader onComplete={() => setLoading(false)} />

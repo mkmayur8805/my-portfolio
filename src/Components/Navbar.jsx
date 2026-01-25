@@ -158,7 +158,7 @@ const Navbar = () => {
             key={idx}
             ref={el => (menuRefEls.current[idx] = el)}
             onClick={() => handleClick(e)}
-            className="cursor-pointer text-lg font-semibold hover:text-(--primery-color) transition-all duration-300 hover:-translate-y-1"
+            className="cursor-pointer text-lg fw-500 hover:text-(--primery-color) transition-all duration-300 hover:-translate-y-1"
           >
             {e.item}
           </li>
@@ -169,7 +169,7 @@ const Navbar = () => {
       <button
         ref={buttonRef}
         onClick={() => handleClick(menu.find(m => m.item === "Contact"))}
-        className="hidden lg:flex px-6 py-3 rounded-2xl border border-zinc-200 font-semibold bg-white hover:bg-(--primery-color) hover:text-white transition-all duration-300 shadow-lg"
+        className="hidden lg:flex px-6 py-3 rounded-2xl border border-zinc-200 fw-500 bg-white hover:bg-(--primery-color) hover:text-white transition-all duration-300 shadow-lg"
       >
         Lets' Talk
       </button>
